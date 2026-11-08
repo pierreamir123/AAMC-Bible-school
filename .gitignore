@@ -1,0 +1,16 @@
+# Voice recording and photo of named people (kept local)
+raw/records/
+raw/images/content-tracks-handwritten-note.jpg
+
+# Obsidian workspace state and caches (change constantly)
+.obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/cache
+
+# Generated PDFs: rebuild with Deliverables/*/tools/*.py (raw/pdfs source PDFs stay tracked)
+Deliverables/**/*.pdf
+
+# Local tool settings and OS files
+.claude/settings.local.json
+Thumbs.db
+desktop.ini

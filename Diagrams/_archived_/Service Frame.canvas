@@ -1,0 +1,1415 @@
+{
+ "nodes": [
+  {
+   "id": "title",
+   "type": "text",
+   "x": 0,
+   "y": 0,
+   "width": 2500,
+   "height": 210,
+   "text": "# الإطار الكبير لمدرسة الكتاب المقدس\n### خدمة دراسية + خدمة مركزية + فريق خدام + ثيم · ٧ مراحل × ٣ ترمات\nالإطار مبني على **رؤيتك في التسجيل الصوتي**. المملوء بالأخضر من كلامك، والأصفر اقتراحي ينتظر موافقتك، والأحمر **فاضٍ أو قرار مفتوح** تملأه أنت.",
+   "color": "5"
+  },
+  {
+   "id": "lg1",
+   "type": "text",
+   "x": 0,
+   "y": 230,
+   "width": 800,
+   "height": 110,
+   "text": "🟩 **من رؤيتك** (التسجيل وقراراتك)",
+   "color": "4"
+  },
+  {
+   "id": "lg2",
+   "type": "text",
+   "x": 850,
+   "y": 230,
+   "width": 800,
+   "height": 110,
+   "text": "🟨 **اقتراح** مني ينتظر موافقتك",
+   "color": "3"
+  },
+  {
+   "id": "lg3",
+   "type": "text",
+   "x": 1700,
+   "y": 230,
+   "width": 800,
+   "height": 110,
+   "text": "🟥 **فاضٍ / قرار مفتوح** تملأه أنت",
+   "color": "1"
+  },
+  {
+   "id": "gV",
+   "type": "group",
+   "x": -40,
+   "y": 400,
+   "width": 2580,
+   "height": 470,
+   "label": "١ · الرؤية (من التسجيل)",
+   "color": "4"
+  },
+  {
+   "id": "v1",
+   "type": "text",
+   "x": 0,
+   "y": 470,
+   "width": 800,
+   "height": 330,
+   "text": "## ما أريد\nأن تكون **مدرسة الكتاب المقدس** لها **خدمة دراسية** و**خدمة مركزية**.\nالهدف في ٧ مراحل: تعليم الكتاب **بانورامياً وبعمق** (**T-strategy**: أفقي = عرض، رأسي = عمق).",
+   "color": "4"
+  },
+  {
+   "id": "v2",
+   "type": "text",
+   "x": 850,
+   "y": 470,
+   "width": 800,
+   "height": 330,
+   "text": "## كيف\n**فريق من ٥-٩ خدام** على **٥ حارات** (Personas).\nإعداد الخدام بـ **Trident**: Structure · Biblical skills · Technical skills.\nتقييم نفسي وقدرات يوزّع الخدام على الحارات ثم **تيمز وفرق**.",
+   "color": "4"
+  },
+  {
+   "id": "v3",
+   "type": "text",
+   "x": 1700,
+   "y": 470,
+   "width": 800,
+   "height": 330,
+   "text": "## الروح\n**ثيم** واحد يسري في كل المراحل بكل تفاصيله: السيستم والكريدت والعروض والستايل، **ينبع من قلب الكتاب المقدس** ويتأثر بالكنيسة الأرثوذكسية.\nماسكوت: **مورو**.",
+   "color": "4"
+  },
+  {
+   "id": "gS",
+   "type": "group",
+   "x": -40,
+   "y": 960,
+   "width": 2580,
+   "height": 1240,
+   "label": "٢ · الخدمة الدراسية: ٧ مراحل × ٣ ترمات (مدرسة الكتاب المقدس)",
+   "color": 6
+  },
+  {
+   "id": "st0",
+   "type": "text",
+   "x": 0,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م١\n**تالتة ابتدائي**\nسن ٨-٩\n**Pilot (البداية)**",
+   "color": "4"
+  },
+  {
+   "id": "st0t0",
+   "type": "text",
+   "x": 0,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st0t1",
+   "type": "text",
+   "x": 0,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st0t2",
+   "type": "text",
+   "x": 0,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st1",
+   "type": "text",
+   "x": 360,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٢\n**رابعة ابتدائي**\nسن ٩-١٠\nيُفتح لاحقاً",
+   "color": "3"
+  },
+  {
+   "id": "st1t0",
+   "type": "text",
+   "x": 360,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st1t1",
+   "type": "text",
+   "x": 360,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st1t2",
+   "type": "text",
+   "x": 360,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st2",
+   "type": "text",
+   "x": 720,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٣\n**خامسة ابتدائي**\nسن ١٠-١١\nيُفتح لاحقاً",
+   "color": "3"
+  },
+  {
+   "id": "st2t0",
+   "type": "text",
+   "x": 720,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st2t1",
+   "type": "text",
+   "x": 720,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st2t2",
+   "type": "text",
+   "x": 720,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st3",
+   "type": "text",
+   "x": 1080,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٤\n**سادسة ابتدائي**\nسن ١١-١٢\nيُفتح لاحقاً",
+   "color": "3"
+  },
+  {
+   "id": "st3t0",
+   "type": "text",
+   "x": 1080,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st3t1",
+   "type": "text",
+   "x": 1080,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st3t2",
+   "type": "text",
+   "x": 1080,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st4",
+   "type": "text",
+   "x": 1440,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٥\n**أولى إعدادي**\nسن ١٢-١٣\n**Pilot (البداية)**",
+   "color": "4"
+  },
+  {
+   "id": "st4t0",
+   "type": "text",
+   "x": 1440,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st4t1",
+   "type": "text",
+   "x": 1440,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st4t2",
+   "type": "text",
+   "x": 1440,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st5",
+   "type": "text",
+   "x": 1800,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٦\n**تانية إعدادي**\nسن ١٣-١٤\nيُفتح لاحقاً",
+   "color": "3"
+  },
+  {
+   "id": "st5t0",
+   "type": "text",
+   "x": 1800,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st5t1",
+   "type": "text",
+   "x": 1800,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st5t2",
+   "type": "text",
+   "x": 1800,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st6",
+   "type": "text",
+   "x": 2160,
+   "y": 1040,
+   "width": 330,
+   "height": 230,
+   "text": "## م٧\n**تالتة إعدادي**\nسن ١٤-١٥\nيُفتح لاحقاً",
+   "color": "3"
+  },
+  {
+   "id": "st6t0",
+   "type": "text",
+   "x": 2160,
+   "y": 1300,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 1**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st6t1",
+   "type": "text",
+   "x": 2160,
+   "y": 1470,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 2**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "st6t2",
+   "type": "text",
+   "x": 2160,
+   "y": 1640,
+   "width": 330,
+   "height": 150,
+   "text": "**ترم 3**\n_فاضٍ: المحتوى من المحاور الثلاثين_",
+   "color": "1"
+  },
+  {
+   "id": "rl1",
+   "type": "text",
+   "x": 0,
+   "y": 1830,
+   "width": 1130,
+   "height": 300,
+   "text": "## إضافة المراحل (اقتراح)\nمن التسجيل: نبدأ Pilot (تالتة ابتدائي + أولى إعدادي) ونضيف **دفعة أو دفعتين كل سنة** حتى السبع.\nردّك: **النموذجان حسب الاحتياج**: (أ) الدفعات تكبر مع طلابها، (ب) نضيف مراحل جديدة.\nسنة ١: م١+م٥ · سنة ٢: +م٢+م٦ · سنة ٣: +م٣+م٧ · سنة ٤: +م٤.",
+   "color": "3"
+  },
+  {
+   "id": "rl2",
+   "type": "text",
+   "x": 1180,
+   "y": 1830,
+   "width": 1320,
+   "height": 300,
+   "text": "## المحتوى (فاضٍ بقرارك)\nلا يوجد منهج مُسبق. المحتوى يُبنى من **٣٠ محوراً** بموضوعاتها تختار منها وترتّبها.\nالطريقة المقترحة: تعبئة المراحل ثم الترمات، مع إعادة المحور بعمق أكبر في مراحل لاحقة (فكرة حلزونية).\nعدد الأولاد في كل مرحلة وحجم الدفعة: **غير محدد**.",
+   "color": "1"
+  },
+  {
+   "id": "gC",
+   "type": "group",
+   "x": -40,
+   "y": 2290,
+   "width": 2580,
+   "height": 1100,
+   "label": "٣ · الخدمة المركزية: المنتجات (تفيد كل الأعمار)",
+   "color": 5
+  },
+  {
+   "id": "ce1",
+   "type": "text",
+   "x": 0,
+   "y": 2370,
+   "width": 1180,
+   "height": 260,
+   "text": "## Digital (من التسجيل)\nGames · Interactive games · Online courses · مواقع · Digital assets",
+   "color": "4"
+  },
+  {
+   "id": "ce2",
+   "type": "text",
+   "x": 1280,
+   "y": 2370,
+   "width": 1220,
+   "height": 260,
+   "text": "## Physical (من التسجيل)\nمطبوعات · Activity books · Printables · Guides · Board games · Family experiences (ترابط عائلي)",
+   "color": "4"
+  },
+  {
+   "id": "cw0",
+   "type": "text",
+   "x": 0,
+   "y": 2690,
+   "width": 595,
+   "height": 430,
+   "text": "## A · قبل الـPilot\n١ حزمة الهوية + مورو\n٢ دورة إعداد الخدام\n٣ دليل المحاضرة\n٤ طقم الكريدت\n٥ وجبة البيت\n٦ بطاقات «سفر في سطر»\n٧ ألعاب الدقائق الخمس\n_(عناوين مؤقتة تُعاد من المحاور)_",
+   "color": "3"
+  },
+  {
+   "id": "cw1",
+   "type": "text",
+   "x": 625,
+   "y": 2690,
+   "width": 595,
+   "height": 430,
+   "text": "## B · أول ترم\n٨ خريطة S + خط زمن\n٩ لعبة «قصة الكتاب»\n١٠ أنشطة «مقدمات»\n١١ دليل الذبائح والأعياد *(مراجعة)*\n١٢ لعبة «ظل وحقيقة»\n١٣ حزمة احتفال الترم\n_(عناوين مؤقتة تُعاد من المحاور)_",
+   "color": "3"
+  },
+  {
+   "id": "cw2",
+   "type": "text",
+   "x": 1250,
+   "y": 2690,
+   "width": 595,
+   "height": 430,
+   "text": "## C · لاحقاً سنة ١\n١٤ أنشطة «حياة الرب يسوع»\n١٥ حقيبة الأسئلة الصعبة *(مراجعة)*\n١٦ ليلة الكتاب العائلية\n١٧ موقع المدرسة\n_(عناوين مؤقتة تُعاد من المحاور)_",
+   "color": "3"
+  },
+  {
+   "id": "cw3",
+   "type": "text",
+   "x": 1875,
+   "y": 2690,
+   "width": 595,
+   "height": 430,
+   "text": "## D · سنة ٢+\n١٨ مجسم خيمة الاجتماع\n١٩ لعبة خرائط تفاعلية\n٢٠ بقية الخرائط\n_(عناوين مؤقتة تُعاد من المحاور)_",
+   "color": "3"
+  },
+  {
+   "id": "cx",
+   "type": "text",
+   "x": 0,
+   "y": 3170,
+   "width": 2500,
+   "height": 170,
+   "text": "**الخانة الفاضية:** منتجات إضافية يطلبها الخدام أو المراحل 🟥 · **حمل الحارات:** الراوي والرؤية الأثقل، المضيف الأخف · **لو الفريق ٥:** أجّل المنتجات ٨-١٣ لما بعد أول ترم.",
+   "color": "1"
+  },
+  {
+   "id": "gF",
+   "type": "group",
+   "x": -40,
+   "y": 3480,
+   "width": 2580,
+   "height": 1230,
+   "label": "٤ · الفريق: ٥-٩ خدام على ٥ حارات (Personas)",
+   "color": 2
+  },
+  {
+   "id": "li0",
+   "type": "file",
+   "x": 0,
+   "y": 3560,
+   "width": 460,
+   "height": 340,
+   "file": "raw/images/personas/1-storyteller.jpg"
+  },
+  {
+   "id": "ln0",
+   "type": "text",
+   "x": 0,
+   "y": 3920,
+   "width": 460,
+   "height": 260,
+   "text": "## الراوي\n**Marketing & Content**\nالكلمات والرسائل",
+   "color": "4"
+  },
+  {
+   "id": "sa0",
+   "type": "text",
+   "x": 0,
+   "y": 4200,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ١:** ........ (فاضٍ)",
+   "color": "1"
+  },
+  {
+   "id": "sb0",
+   "type": "text",
+   "x": 0,
+   "y": 4330,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ٢:** ........ (اختياري)",
+   "color": "1"
+  },
+  {
+   "id": "li1",
+   "type": "file",
+   "x": 500,
+   "y": 3560,
+   "width": 460,
+   "height": 340,
+   "file": "raw/images/personas/2-visionary.jpg"
+  },
+  {
+   "id": "ln1",
+   "type": "text",
+   "x": 500,
+   "y": 3920,
+   "width": 460,
+   "height": 260,
+   "text": "## صاحب الرؤية\n**Media & Design**\nالصور والشاشات",
+   "color": "4"
+  },
+  {
+   "id": "sa1",
+   "type": "text",
+   "x": 500,
+   "y": 4200,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ١:** ........ (فاضٍ)",
+   "color": "1"
+  },
+  {
+   "id": "sb1",
+   "type": "text",
+   "x": 500,
+   "y": 4330,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ٢:** ........ (اختياري)",
+   "color": "1"
+  },
+  {
+   "id": "li2",
+   "type": "file",
+   "x": 1000,
+   "y": 3560,
+   "width": 460,
+   "height": 340,
+   "file": "raw/images/personas/3-spark.jpg"
+  },
+  {
+   "id": "ln2",
+   "type": "text",
+   "x": 1000,
+   "y": 3920,
+   "width": 460,
+   "height": 260,
+   "text": "## الشرارة\n**Gamify & Engage**\nالألعاب والتحديات",
+   "color": "4"
+  },
+  {
+   "id": "sa2",
+   "type": "text",
+   "x": 1000,
+   "y": 4200,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ١:** ........ (فاضٍ)",
+   "color": "1"
+  },
+  {
+   "id": "sb2",
+   "type": "text",
+   "x": 1000,
+   "y": 4330,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ٢:** ........ (اختياري)",
+   "color": "1"
+  },
+  {
+   "id": "li3",
+   "type": "file",
+   "x": 1500,
+   "y": 3560,
+   "width": 460,
+   "height": 340,
+   "file": "raw/images/personas/4-keeper.jpg"
+  },
+  {
+   "id": "ln3",
+   "type": "text",
+   "x": 1500,
+   "y": 3920,
+   "width": 460,
+   "height": 260,
+   "text": "## الأمين\n**Admin & System**\nالنظام والمتابعة",
+   "color": "4"
+  },
+  {
+   "id": "sa3",
+   "type": "text",
+   "x": 1500,
+   "y": 4200,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ١:** ........ (فاضٍ)",
+   "color": "1"
+  },
+  {
+   "id": "sb3",
+   "type": "text",
+   "x": 1500,
+   "y": 4330,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ٢:** ........ (اختياري)",
+   "color": "1"
+  },
+  {
+   "id": "li4",
+   "type": "file",
+   "x": 2000,
+   "y": 3560,
+   "width": 460,
+   "height": 340,
+   "file": "raw/images/personas/5-host.jpg"
+  },
+  {
+   "id": "ln4",
+   "type": "text",
+   "x": 2000,
+   "y": 3920,
+   "width": 460,
+   "height": 260,
+   "text": "## المضيف\n**Event Management**\nالاستقبال والفعاليات",
+   "color": "4"
+  },
+  {
+   "id": "sa4",
+   "type": "text",
+   "x": 2000,
+   "y": 4200,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ١:** ........ (فاضٍ)",
+   "color": "1"
+  },
+  {
+   "id": "sb4",
+   "type": "text",
+   "x": 2000,
+   "y": 4330,
+   "width": 460,
+   "height": 110,
+   "text": "**خادم ٢:** ........ (اختياري)",
+   "color": "1"
+  },
+  {
+   "id": "fr",
+   "type": "text",
+   "x": 0,
+   "y": 4480,
+   "width": 1230,
+   "height": 190,
+   "text": "**معايير القبول (من ورقتك):** شغف · انضباط · مساهمة بالوقت · تشغيل النفس. **الأعداد:** من ٥ إلى ٩ (الرقم النهائي مؤجل). الأعمار: جامعة ← ٤٠.",
+   "color": "4"
+  },
+  {
+   "id": "fr2",
+   "type": "text",
+   "x": 1280,
+   "y": 4480,
+   "width": 1220,
+   "height": 190,
+   "text": "**التقييم والتوزيع (اقتراح):** استبيان مواقف + عينات عمل + ميول + تفرغ ← حارة أساسية وثانوية ← تيمز وفرق منتج. أداة مساعدة يراجعها المسؤول.",
+   "color": "3"
+  },
+  {
+   "id": "gT",
+   "type": "group",
+   "x": -40,
+   "y": 4800,
+   "width": 2580,
+   "height": 1080,
+   "label": "٥ · Trident: برنامج إعداد الخدام (٣ محاور)",
+   "color": 4
+  },
+  {
+   "id": "tr1",
+   "type": "text",
+   "x": 0,
+   "y": 4880,
+   "width": 800,
+   "height": 400,
+   "text": "## ١ · Structure\nCode of conduct/discipline · اجتماع أسبوعي · Biblical study خاصة · Prayer time · Communication flow · Hierarchy وTeams · **هوية الخدمة** (Branding، ألوان، مورو، حضور على الأرض)",
+   "color": "4"
+  },
+  {
+   "id": "tr2",
+   "type": "text",
+   "x": 850,
+   "y": 4880,
+   "width": 800,
+   "height": 400,
+   "text": "## ٢ · Biblical skills\nمهارات الدراسة والتعمق ليستند الخدام إلى الكتاب ويقدموه جيداً.\n*(اقتراح)* أقرأ ← أدرس ← أفهم ← أعيش ← أكرز · سفر في سطر · عمق · خرائط · أسئلة صعبة",
+   "color": "4"
+  },
+  {
+   "id": "tr3",
+   "type": "text",
+   "x": 1700,
+   "y": 4880,
+   "width": 800,
+   "height": 400,
+   "text": "## ٣ · Technical skills\nAI literacy · Prompt creation and development · Educational psychology · مواكبة جيل ألفا.\n*(اقتراحات)* حماية الأطفال · تقييم مخرجات الـAI · إدارة الفصل · تصميم · ألعاب · مشروعات",
+   "color": "4"
+  },
+  {
+   "id": "wk0",
+   "type": "text",
+   "x": 0,
+   "y": 5340,
+   "width": 460,
+   "height": 170,
+   "text": "### أسبوع ١\nالرؤية",
+   "color": "3"
+  },
+  {
+   "id": "wk1",
+   "type": "text",
+   "x": 500,
+   "y": 5340,
+   "width": 460,
+   "height": 170,
+   "text": "### أسبوع ٢-٣\nStructure",
+   "color": "3"
+  },
+  {
+   "id": "wk2",
+   "type": "text",
+   "x": 1000,
+   "y": 5340,
+   "width": 460,
+   "height": 170,
+   "text": "### أسبوع ٤-٥\nBiblical",
+   "color": "3"
+  },
+  {
+   "id": "wk3",
+   "type": "text",
+   "x": 1500,
+   "y": 5340,
+   "width": 460,
+   "height": 170,
+   "text": "### أسبوع ٦-٧\nTechnical",
+   "color": "3"
+  },
+  {
+   "id": "wk4",
+   "type": "text",
+   "x": 2000,
+   "y": 5340,
+   "width": 460,
+   "height": 170,
+   "text": "### أسبوع ٨\nتقييم وتوزيع",
+   "color": "3"
+  },
+  {
+   "id": "fd",
+   "type": "file",
+   "x": 0,
+   "y": 5570,
+   "width": 1230,
+   "height": 260,
+   "file": "wiki/concepts/Servant Preparation Program - Deliverables.md",
+   "color": "4"
+  },
+  {
+   "id": "fd2",
+   "type": "text",
+   "x": 1280,
+   "y": 5570,
+   "width": 1220,
+   "height": 260,
+   "text": "**المخرجات (PDF بإصدارات):** `Deliverables/Servant Preparation Program/` · الأحدث v1.1 · دليل · خطط ٨ جلسات · حقيبة تقييم · نماذج.",
+   "color": "3"
+  },
+  {
+   "id": "gI",
+   "type": "group",
+   "x": -40,
+   "y": 5970,
+   "width": 2580,
+   "height": 1010,
+   "label": "٦ · الهوية والثيم (يسري في كل المراحل)",
+   "color": 3
+  },
+  {
+   "id": "id1",
+   "type": "text",
+   "x": 0,
+   "y": 6050,
+   "width": 820,
+   "height": 380,
+   "text": "## الثيم 🟥\n**لم يُختر.** الشرط: ينبع من قلب الكتاب المقدس ويتأثر بالأرثوذكسية ويكبر مع الأولاد.\nالاتجاهات المقترحة: A مصباح الكلمة · B الرحلة · **C بيت الحكمة والأعمدة السبعة (الأقرب لتوصيتي الأولى)** · **D أنا هو (توصيتي بعد البحث)** · E الأيام السبعة · F الآيات السبع",
+   "color": "1"
+  },
+  {
+   "id": "id2",
+   "type": "text",
+   "x": 860,
+   "y": 6050,
+   "width": 820,
+   "height": 380,
+   "text": "## ماسكوت 🟩\n**مورو** (مثال منك): يُستخدم في الترويج والسيستم والثيم.\nالتصميم الفعلي: **فاضٍ**.",
+   "color": "4"
+  },
+  {
+   "id": "id3",
+   "type": "text",
+   "x": 1720,
+   "y": 6050,
+   "width": 780,
+   "height": 380,
+   "text": "## الكريدت 🟩\nنظام **نقاط/أرصدة** + **تقدير** (الاثنان).\nالأسماء والآليات: **تتحدد بعد الثيم** 🟥",
+   "color": "4"
+  },
+  {
+   "id": "id4",
+   "type": "text",
+   "x": 0,
+   "y": 6470,
+   "width": 820,
+   "height": 230,
+   "text": "**الألوان والخطوط والأيقنة:** فاضٍ 🟥 (تُشتق من الثيم)",
+   "color": "1"
+  },
+  {
+   "id": "id5",
+   "type": "text",
+   "x": 860,
+   "y": 6470,
+   "width": 820,
+   "height": 230,
+   "text": "**نبرة الكلام وأسلوب العروض:** فاضٍ 🟥",
+   "color": "1"
+  },
+  {
+   "id": "id6",
+   "type": "text",
+   "x": 1720,
+   "y": 6470,
+   "width": 780,
+   "height": 230,
+   "text": "**الحضور على الأرض** (لافتة، زي، ركن): فاضٍ 🟥",
+   "color": "1"
+  },
+  {
+   "id": "idf",
+   "type": "file",
+   "x": 0,
+   "y": 6750,
+   "width": 1230,
+   "height": 190,
+   "file": "wiki/concepts/Servant Program - Stage 1b Theme Research.md",
+   "color": "3"
+  },
+  {
+   "id": "idg",
+   "type": "file",
+   "x": 1280,
+   "y": 6750,
+   "width": 1220,
+   "height": 190,
+   "file": "wiki/concepts/Servant Program - Stage 1b Theme.md",
+   "color": "3"
+  },
+  {
+   "id": "gO",
+   "type": "group",
+   "x": -40,
+   "y": 7070,
+   "width": 2580,
+   "height": 880,
+   "label": "٧ · التشغيل والحوكمة",
+   "color": 1
+  },
+  {
+   "id": "op1",
+   "type": "text",
+   "x": 0,
+   "y": 7150,
+   "width": 800,
+   "height": 350,
+   "text": "## الإيقاع (من التسجيل)\nمواعيد اجتماع **أسبوعية** · Biblical study لنا · **Prayer time** · Communication flow · Hierarchy.\nالموعد واليوم والمكان: **فاضٍ** 🟥",
+   "color": "4"
+  },
+  {
+   "id": "op2",
+   "type": "text",
+   "x": 850,
+   "y": 7150,
+   "width": 800,
+   "height": 350,
+   "text": "## الأدوار (اقتراح)\nأمين الخدمة · قائد كل حارة · مراجع كتابي/لاهوتي · مراجع تربوي · مسؤول حماية الأطفال\n**الأسماء كلها: فاضية** 🟥",
+   "color": "3"
+  },
+  {
+   "id": "op3",
+   "type": "text",
+   "x": 1700,
+   "y": 7150,
+   "width": 800,
+   "height": 350,
+   "text": "## القواعد\nCode of conduct/discipline (قالب في النماذج) · حماية الأطفال: بالغان دائماً، قوائم حضور، لا تواصل خاص، لا صور بلا إذن · **سياسة الكنيسة هي المرجع** 🟥",
+   "color": "3"
+  },
+  {
+   "id": "ro0",
+   "type": "text",
+   "x": 0,
+   "y": 7540,
+   "width": 460,
+   "height": 130,
+   "text": "**أمين الخدمة:** ........",
+   "color": "1"
+  },
+  {
+   "id": "ro1",
+   "type": "text",
+   "x": 500,
+   "y": 7540,
+   "width": 460,
+   "height": 130,
+   "text": "**المراجع الكنسي:** ........",
+   "color": "1"
+  },
+  {
+   "id": "ro2",
+   "type": "text",
+   "x": 1000,
+   "y": 7540,
+   "width": 460,
+   "height": 130,
+   "text": "**مسؤول الحماية:** ........",
+   "color": "1"
+  },
+  {
+   "id": "ro3",
+   "type": "text",
+   "x": 1500,
+   "y": 7540,
+   "width": 460,
+   "height": 130,
+   "text": "**الميسّر:** ........",
+   "color": "1"
+  },
+  {
+   "id": "ro4",
+   "type": "text",
+   "x": 2000,
+   "y": 7540,
+   "width": 460,
+   "height": 130,
+   "text": "**موعد الاجتماع:** ........",
+   "color": "1"
+  },
+  {
+   "id": "opx",
+   "type": "text",
+   "x": 0,
+   "y": 7710,
+   "width": 2500,
+   "height": 190,
+   "text": "**ميزانية السنة الأولى:** غير محددة 🟥 · **حجم الـPilot:** غير محدد 🟥 · **مكان حفظ درجات التقييم:** غير محدد 🟥",
+   "color": "1"
+  },
+  {
+   "id": "gL",
+   "type": "group",
+   "x": -40,
+   "y": 8040,
+   "width": 2580,
+   "height": 700,
+   "label": "٨ · الخط الزمني: أول ٩٠ يوماً (اقتراح)",
+   "color": 3
+  },
+  {
+   "id": "tl0",
+   "type": "text",
+   "x": 0,
+   "y": 8120,
+   "width": 460,
+   "height": 260,
+   "text": "### أسابيع ١-٨\nبرنامج Trident + إنتاج موازٍ (دفعة A)",
+   "color": "3"
+  },
+  {
+   "id": "tl1",
+   "type": "text",
+   "x": 500,
+   "y": 8120,
+   "width": 460,
+   "height": 260,
+   "text": "### أسبوع ٨\nالتقييم والتوزيع وتكوين الفرق",
+   "color": "3"
+  },
+  {
+   "id": "tl2",
+   "type": "text",
+   "x": 1000,
+   "y": 8120,
+   "width": 460,
+   "height": 260,
+   "text": "### أسابيع ٩-١٢\nعمل الفرق + دفعة B + بروفتان",
+   "color": "3"
+  },
+  {
+   "id": "tl3",
+   "type": "text",
+   "x": 1500,
+   "y": 8120,
+   "width": 460,
+   "height": 260,
+   "text": "### أسبوع ١٣\nلقاء الأهالي + قرار الإطلاق",
+   "color": "3"
+  },
+  {
+   "id": "tl4",
+   "type": "text",
+   "x": 2000,
+   "y": 8120,
+   "width": 460,
+   "height": 260,
+   "text": "### الإطلاق\nPilot: م١ وم٥ (مقترح ٢٠٢٧-٢-١٤)",
+   "color": "3"
+  },
+  {
+   "id": "tlf",
+   "type": "file",
+   "x": 0,
+   "y": 8430,
+   "width": 2500,
+   "height": 250,
+   "file": "wiki/concepts/Servant Program - Stage 6 First 90 Days.md",
+   "color": "3"
+  },
+  {
+   "id": "gD",
+   "type": "group",
+   "x": -40,
+   "y": 8830,
+   "width": 2580,
+   "height": 940,
+   "label": "٩ · القرارات المفتوحة والروابط",
+   "color": 1
+  },
+  {
+   "id": "de",
+   "type": "text",
+   "x": 0,
+   "y": 8910,
+   "width": 1230,
+   "height": 800,
+   "text": "## 🟥 قراراتك لتملأ الإطار\n- **الثيم** (أي اتجاه؟)\n- **أي المحاور الثلاثين** تدخل في أي مرحلة وترم\n- الأسماء: أمين الخدمة، المراجع الكنسي، مسؤول الحماية، الميسّر\n- **عدد الخدام** (٥-٩) وأعمارهم ووقتهم\n- **موعد الاجتماع** وبداية البرنامج\n- **حجم الـPilot** والميزانية\n- سياسة حماية الأطفال في الكنيسة\n- قانون الأسفار وعددها (مرجع قبطي رسمي)\n- مكان حفظ بيانات التقييم",
+   "color": "1"
+  },
+  {
+   "id": "lk0",
+   "type": "file",
+   "x": 1280,
+   "y": 8910,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/concepts/Pillars - Topics and Vision.md",
+   "color": "4"
+  },
+  {
+   "id": "lk1",
+   "type": "file",
+   "x": 1900,
+   "y": 8910,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/concepts/Prompt - Ready to Paste.md",
+   "color": "3"
+  },
+  {
+   "id": "lk2",
+   "type": "file",
+   "x": 1280,
+   "y": 9180,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/concepts/Servant Program - Stage 4 Rollout.md",
+   "color": "3"
+  },
+  {
+   "id": "lk3",
+   "type": "file",
+   "x": 1900,
+   "y": 9180,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/concepts/Servant Program - Stage 5 Product Catalog.md",
+   "color": "3"
+  },
+  {
+   "id": "lk4",
+   "type": "file",
+   "x": 1280,
+   "y": 9450,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/concepts/Servant Program - Stage 3 Assessment.md",
+   "color": "3"
+  },
+  {
+   "id": "lk5",
+   "type": "file",
+   "x": 1900,
+   "y": 9450,
+   "width": 600,
+   "height": 250,
+   "file": "wiki/projects/Bible School Curriculum Project.md",
+   "color": "3"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "st0",
+   "fromSide": "right",
+   "toNode": "st1",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e2",
+   "fromNode": "st1",
+   "fromSide": "right",
+   "toNode": "st2",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e3",
+   "fromNode": "st2",
+   "fromSide": "right",
+   "toNode": "st3",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e4",
+   "fromNode": "st3",
+   "fromSide": "right",
+   "toNode": "st4",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e5",
+   "fromNode": "st4",
+   "fromSide": "right",
+   "toNode": "st5",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e6",
+   "fromNode": "st5",
+   "fromSide": "right",
+   "toNode": "st6",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e7",
+   "fromNode": "v1",
+   "fromSide": "bottom",
+   "toNode": "gS",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e8",
+   "fromNode": "cw0",
+   "fromSide": "right",
+   "toNode": "cw1",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e9",
+   "fromNode": "cw1",
+   "fromSide": "right",
+   "toNode": "cw2",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e10",
+   "fromNode": "cw2",
+   "fromSide": "right",
+   "toNode": "cw3",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e11",
+   "fromNode": "gS",
+   "fromSide": "bottom",
+   "toNode": "gC",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e12",
+   "fromNode": "li0",
+   "fromSide": "bottom",
+   "toNode": "ln0",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e13",
+   "fromNode": "li1",
+   "fromSide": "bottom",
+   "toNode": "ln1",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e14",
+   "fromNode": "li2",
+   "fromSide": "bottom",
+   "toNode": "ln2",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e15",
+   "fromNode": "li3",
+   "fromSide": "bottom",
+   "toNode": "ln3",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e16",
+   "fromNode": "li4",
+   "fromSide": "bottom",
+   "toNode": "ln4",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e17",
+   "fromNode": "gC",
+   "fromSide": "bottom",
+   "toNode": "gF",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e18",
+   "fromNode": "wk0",
+   "fromSide": "right",
+   "toNode": "wk1",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e19",
+   "fromNode": "wk1",
+   "fromSide": "right",
+   "toNode": "wk2",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e20",
+   "fromNode": "wk2",
+   "fromSide": "right",
+   "toNode": "wk3",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e21",
+   "fromNode": "wk3",
+   "fromSide": "right",
+   "toNode": "wk4",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e22",
+   "fromNode": "tr1",
+   "fromSide": "bottom",
+   "toNode": "wk1",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e23",
+   "fromNode": "tr2",
+   "fromSide": "bottom",
+   "toNode": "wk2",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e24",
+   "fromNode": "tr3",
+   "fromSide": "bottom",
+   "toNode": "wk3",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e25",
+   "fromNode": "gF",
+   "fromSide": "bottom",
+   "toNode": "gT",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e26",
+   "fromNode": "gT",
+   "fromSide": "bottom",
+   "toNode": "gI",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e27",
+   "fromNode": "gI",
+   "fromSide": "bottom",
+   "toNode": "gO",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e28",
+   "fromNode": "tl0",
+   "fromSide": "right",
+   "toNode": "tl1",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e29",
+   "fromNode": "tl1",
+   "fromSide": "right",
+   "toNode": "tl2",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e30",
+   "fromNode": "tl2",
+   "fromSide": "right",
+   "toNode": "tl3",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e31",
+   "fromNode": "tl3",
+   "fromSide": "right",
+   "toNode": "tl4",
+   "toSide": "left",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e32",
+   "fromNode": "gO",
+   "fromSide": "bottom",
+   "toNode": "gL",
+   "toSide": "top",
+   "toEnd": "arrow"
+  },
+  {
+   "id": "e33",
+   "fromNode": "gL",
+   "fromSide": "bottom",
+   "toNode": "gD",
+   "toSide": "top",
+   "toEnd": "arrow"
+  }
+ ]
+}
