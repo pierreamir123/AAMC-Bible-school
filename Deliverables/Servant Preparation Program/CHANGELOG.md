@@ -2,6 +2,16 @@
 
 الأحدث أولاً. كل إصدار في مجلده ولا يُستبدل.
 
+## v1.6 · 2026-11-08
+- **ملاحظة:** Skeleton: reading mindset, interactive approach, critical thinking, research critical thinking (units 2-8 to 2-11, proposal)
+- **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (2 lines)
+- **الملفات:** `01 - Program Handbook (v1.6).pdf` · `02 - Session Plans (v1.6).pdf` · `03 - Assessment Kit (v1.6).pdf` · `04 - Templates and Handouts (v1.6).pdf`
+
+## v1.5 · 2026-11-08
+- **ملاحظة:** Skeleton code Walk the Talk + story-delivery template; RASCI and team-stage proposals added
+- **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (10 lines), 02-session-plans.md (9 lines)
+- **الملفات:** `01 - Program Handbook (v1.5).pdf` · `02 - Session Plans (v1.5).pdf` · `03 - Assessment Kit (v1.5).pdf` · `04 - Templates and Handouts (v1.5).pdf`
+
 ## v1.4 · 2026-11-08
 - **ملاحظة:** Team-building stages: Forming, Storming, Norming, Performing (applies to every team and the whole group)
 - **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (2 lines)

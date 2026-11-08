@@ -56,7 +56,7 @@ The final, copy-ready text of prompt v2.1 (staged design of the servant program,
 <strategy name="Trident">
 هعمل برنامج إعداد للخدام ماشي على ٣ محاور، وهنسميهم بـ٣ تعبيرات: الروح (Spirit) والهيكل العظمي (Skeleton) والجسد (Body):
 ١. الروح (Spirit)، وتضم: Mission، Vision، Culture، Identity، Branding، Communication flow، وكودها «Without system everything dies». وتحتها النظام: Code of conduct / Code of discipline، مواعيد اجتماع أسبوعية، Biblical study خاصة بالخدام، Prayer time، Hierarchy وتقسيم Teams، وبناء هوية الخدمة (Branding، ألوان، وجود على الأرض، وMascot اسمه «مورو» كمثال: بيُستخدم في الترويج وفي السيستم وفي الثيم).
-٢. الهيكل العظمي (Skeleton)، وهي الـBiblical skills: مهارات الدراسة والتعمق عشان الخدام يستندوا للكتاب ويخرجوا منه بصورة سليمة.
+٢. الهيكل العظمي (Skeleton)، وهي الـBiblical skills: مهارات الدراسة والتعمق عشان الخدام يستندوا للكتاب ويخرجوا منه بصورة سليمة. كودها «Walk the Talk»: نقدّم أي درس بحيث المعلومة مش صعبة وفي نفس الوقت جذابة؛ وبنظامين: الـWhat (القصة الكتابية اللي الخادم يتعلمها وهو بيحضّر) والـHow (طريقة تقديم التحضير له هي نموذج لطريقة تقديمه، جذابة مش رتيبة). في البوت كامب بنتعلم الـHow والـWhat مدمج فيه: إزاي نقدّم فكرتنا من خلال القصص الكتابية.
 ٣. الجسد (Body)، وهي الـTechnical skills: مهارات مكملة مش في دراسة الكتاب: AI literacy، Prompt creation and development، Educational psychology، مواكبة تطور جيل ألفا.
 
 بذور مني (اقتراح، قيّمها وزوّد عليها ما تراه ناقصاً):

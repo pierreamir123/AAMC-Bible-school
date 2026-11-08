@@ -15,10 +15,16 @@ Catalog of every note in the AAMC Bible School vault, grouped by folder. Read th
 - [[_CLAUDE]] - operating manual for Claude in this vault
 
 ## Logs
-- [[Logs/2026-11-08]] - init entry
+- [[Logs/2026-11-08]] - init entry and the day's work log
 
 ## wiki/projects/
 - [[Bible School Curriculum Project]] - hub: 2-year, 6-term gamified Coptic Orthodox Bible curriculum for ages 11-14
+
+## wiki/entities/
+- [[Michael Safwat]] - المسؤول عن التكوين (servants only for now); Accountable for Mission/Vision/Culture in the Spirit RASCI
+
+## wiki/daily/
+- [[2026-11-08]] - daily note: Trident axes, Spirit, Skeleton code, team stages, RASCI
 
 ## wiki/concepts/
 - [[Phase 1 - Bible Study Methods by Age]] - study methods compared and mapped to ages
@@ -44,13 +50,15 @@ Catalog of every note in the AAMC Bible School vault, grouped by folder. Read th
 - [[Servant Program - Stage 0 Answers]] - intake answers and assumptions for the servant program run
 - [[Servant Program - Stage 1 Structure]] - two services, roles, team layouts for 5/7/9, workload, communication
 - [[Servant Program - Stage 1b Theme]] - 3 theme directions (Lamp, Journey, House of Wisdom) with recommendation C
-- [[Servant Program - Stage 2 Trident]] - preparation program following the transcript: Structure, Biblical skills, Technical skills
+- [[Servant Program - Stage 2 Trident]] - preparation program following the transcript: Spirit (Mission, Vision, Culture, Identity, Branding, Communication flow, code "Without system everything dies"), Skeleton (code "Walk the Talk"), Body
 - [[Servant Program - Stage 3 Assessment]] - assessment and placement into the 5 lanes (work samples, scoring, example, privacy)
 - [[Servant Program - Stage 4 Rollout]] - 7 stages x 3 terms, cohort models, year table, Habib content mapping, T-strategy by age
 - [[Servant Program - Stage 5 Product Catalog]] - 20 central-service products with waves A-D and lane load
 - [[Servant Program - Stage 6 First 90 Days]] - 13-week plan, capacity check, readiness checklist, next-week actions
 - [[Servant Program - Stage 1b Theme Research]] - Bible and web search for more theme directions (D I AM, E seven days, F seven signs); curriculum Pillars renamed to "محاور"
 - [[_archived_ Pillars - Topics and Vision (9 axes)]] - archived 9-axes version before the 30-pillar reset
-- [[Servant Preparation Program - Deliverables]] - finished servant preparation program: 4 versioned PDFs in Deliverables/ (latest v1.1)
+- [[Servant Preparation Program - Deliverables]] - finished servant preparation program: 4 versioned PDFs in Deliverables/ (latest v1.6)
+- [[Team Stages - Evaluation and Milestones]] - Forming/Storming/Norming/Performing: min durations, exit milestones, 5-item team check (proposal)
+- [[Spirit Axis - RASCI Structure and KPIs]] - RASCI matrix, guidelines, structure layers and KPIs for the Spirit axis (proposal)
 - [[Diagrams - Index]] - ten clean Excalidraw diagrams of the service (Diagrams/); old canvases archived
 - [[Deliverables/Vault Notes PDF/README]] - PDF export of all notes (v1.0: 28 PDFs + combined)

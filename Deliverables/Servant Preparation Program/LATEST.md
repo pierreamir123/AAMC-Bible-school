@@ -1,7 +1,7 @@
 # الإصدار الأحدث
 
-**v1.4** · 2026-11-08
+**v1.6** · 2026-11-08
 
-المجلد: `v1.4/`
+المجلد: `v1.6/`
 
-Team-building stages: Forming, Storming, Norming, Performing (applies to every team and the whole group)
+Skeleton: reading mindset, interactive approach, critical thinking, research critical thinking (units 2-8 to 2-11, proposal)

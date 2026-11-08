@@ -23,7 +23,7 @@ Hub note for the AAMC Bible School project: (updated 2026-11-08 to match the chu
 
 
 > [!warning] رؤية جديدة من التسجيل الصوتي (2026-11-08)
-> الخدمة تنقسم إلى **دراسية** و**مركزية**، والفئة من تالتة ابتدائي لتالتة إعدادي (**٧ مراحل**، كل مرحلة ٣ ترمات، تبدأ بدفعتين Pilot — مؤكد من صاحب الخدمة)، وإعداد الخدام بـ Trident (Structure، Biblical skills، Technical skills) على ٥ حارات. هذا يغيّر افتراض عمر ١٠-١٢ في الملفات الأقدم، ومنهج الحبيب يُستخدم للكونتنت فقط لا للهيكل. الخدام ٥-٩. **ثيم** واحد للمدرسة في المراحل السبع (سيستم، كريدت، عروض، ستايل)، ينبع من الكتاب المقدس ويتأثر بالأرثوذكسية. التفاصيل والسؤال المفتوح: [[Prompt - Servant Program and Central Service]]. المنهج الفاضي ينتظر قرارك في المدى.
+> الخدمة تنقسم إلى **دراسية** و**مركزية**، والفئة من تالتة ابتدائي لتالتة إعدادي (**٧ مراحل**، كل مرحلة ٣ ترمات، تبدأ بدفعتين Pilot — مؤكد من صاحب الخدمة)، وإعداد الخدام بـ Trident (الروح، الهيكل العظمي، الجسد؛ كانت Structure، Biblical skills، Technical skills) على ٥ حارات. هذا يغيّر افتراض عمر ١٠-١٢ في الملفات الأقدم، ومنهج الحبيب يُستخدم للكونتنت فقط لا للهيكل. الخدام ٥-٩. **ثيم** واحد للمدرسة في المراحل السبع (سيستم، كريدت، عروض، ستايل)، ينبع من الكتاب المقدس ويتأثر بالأرثوذكسية. التفاصيل والسؤال المفتوح: [[Prompt - Servant Program and Central Service]]. المنهج الفاضي ينتظر قرارك في المدى.
 
 
 > [!info] مستودع GitHub (2026-11-08)
@@ -73,8 +73,19 @@ Hub note for the AAMC Bible School project: (updated 2026-11-08 to match the chu
 | ٠ الإجابات | [[Servant Program - Stage 0 Answers]] | منجز |
 | ١ الهيكل | [[Servant Program - Stage 1 Structure]] | منجز (قرارات مفتوحة) |
 | ١ب الثيم | [[Servant Program - Stage 1b Theme]] | ينتظر اختيارك |
-| ٢ Trident | [[Servant Program - Stage 2 Trident]] | منجز، **والبرنامج كاملاً بصيغة PDF** في [[Servant Preparation Program - Deliverables]] (v1.1) |
+| ٢ Trident | [[Servant Program - Stage 2 Trident]] | منجز، **والبرنامج كاملاً بصيغة PDF** في [[Servant Preparation Program - Deliverables]] (v1.6). ملحقات: [[Team Stages - Evaluation and Milestones]] و[[Spirit Axis - RASCI Structure and KPIs]] (مقترحات تنتظر قراراتك) |
 | ٣ التقييم والتوزيع | [[Servant Program - Stage 3 Assessment]] | منجز |
 | ٤ الـ٧ مراحل | [[Servant Program - Stage 4 Rollout]] | منجز |
 | ٥ كتالوج المنتجات | [[Servant Program - Stage 5 Product Catalog]] | منجز |
 | ٦ أول ٩٠ يوماً | [[Servant Program - Stage 6 First 90 Days]] | منجز (ينتظر قراراتك) |
+
+## القرارات الرئيسية (Key Decisions)، ٢٠٢٦-١١-٠٨
+- **المحاور الثلاثة سُمّيت:** الروح (Spirit)، الهيكل العظمي (Skeleton)، الجسد (Body).
+- **الروح تضم:** Mission، Vision، Culture، Identity، Branding، Communication flow، وكودها **«Without system everything dies»**. «الاكسس» = axes.
+- **الهيكل العظمي:** كوده **«Walk the Talk»**: تقديم الدرس بسهولة وجاذبية؛ نظامان معاً (الـ What = القصة الكتابية أثناء التحضير، والـ How = طريقة التحضير نموذج للتقديم)؛ البوت كامب يعلّم الـ How والـ What مدمج فيه. وحدة ٢-٧ مقترحة.
+- **دراسة الكتاب (الهيكل العظمي):** عقلية القراءة، تناول تفاعلي، تفكير نقدي، بحث نقدي (وحدات ٢-٨ إلى ٢-١١ مقترحة؛ v1.6).
+- **بناء أي تيم** على مراحل Tuckman: Forming ← Storming ← Norming ← Performing، تُطبَّق على كل تيم ومجموعة الخدام كلها. المدد والمعايير مقترحة: [[Team Stages - Evaluation and Milestones]].
+- **نموذج RASCI** على محور الروح: [[Spirit Axis - RASCI Structure and KPIs]] (مصفوفة، إرشادات، KPIs؛ مقترح).
+- **شخص جديد:** [[Michael Safwat]] = المسؤول عن التكوين، للخدام فقط حالياً، والـ A في Mission/Vision/Culture.
+- **مفتوح:** علاقة Michael بأمين الخدمة والكاهن · هل يُستشار الكاهن في Mission/Vision/Culture · أرقام الـ KPIs · مدة المراحل · نصوص Mission/Vision/Culture · هل البوت كامب = برنامج الـ٨ أسابيع.
+- **مطبّق في v1.5 والـ deck:** كود Walk the Talk وقالب تقديم القصة (أسبوع ٥) وملخص RASCI والمدد المقترحة. مصفوفة RASCI والـ KPIs الكاملة داخل المذكرات فقط.

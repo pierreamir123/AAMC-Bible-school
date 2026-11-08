@@ -18,4 +18,5 @@ Stub for Michael Safwat, named by the owner on 2026-11-08 as the answer to "who 
 
 - **Role (stated by owner, 2026-11-08):** المسؤول عن التكوين (the person in charge of formation).
 - **Role in the Spirit axis:** Accountable (A) for Mission, Vision, Culture in [[Spirit Axis - RASCI Structure and KPIs]] (the A assignment is my reading of the owner's answer).
-- **Open:** what "formation" covers (servants' spiritual formation only, or the children's too), his relation to the Service Head (أمين الخدمة) and to the church officer.
+- **Scope (stated by owner, 2026-11-08):** formation covers **servants only, for now**; the children's formation is out of scope until the owner says otherwise.
+- **Open:** his relation to the Service Head (أمين الخدمة) and to the church officer.

@@ -151,7 +151,7 @@ Completed: `- [x] ~~🔴 **Title**~~ ✅ Date`
 
 ## People to Know
 
-None recorded yet.
+- [[Michael Safwat]] - المسؤول عن التكوين (الخدام فقط حالياً)
 
 ## Projects Currently Active
 
