@@ -54,10 +54,10 @@ The final, copy-ready text of prompt v2.1 (staged design of the servant program,
 </theme>
 
 <strategy name="Trident">
-هعمل برنامج إعداد للخدام ماشي على ٣ محاور:
-١. Structure: Code of conduct / Code of discipline، مواعيد اجتماع أسبوعية، Biblical study خاصة بالخدام، Prayer time، Communication flow، Hierarchy وتقسيم Teams، وبناء هوية الخدمة (Branding، ألوان، وجود على الأرض، وMascot اسمه «مورو» كمثال: بيُستخدم في الترويج وفي السيستم وفي الثيم).
-٢. Biblical skills: مهارات الدراسة والتعمق عشان الخدام يستندوا للكتاب ويخرجوا منه بصورة سليمة.
-٣. Technical skills: مهارات مكملة مش في دراسة الكتاب: AI literacy، Prompt creation and development، Educational psychology، مواكبة تطور جيل ألفا.
+هعمل برنامج إعداد للخدام ماشي على ٣ محاور، وهنسميهم بـ٣ تعبيرات: الروح (Spirit) والهيكل العظمي (Skeleton) والجسد (Body):
+١. الروح (Spirit)، وهي الـStructure + الأهداف والمحاور (goals and axes): Code of conduct / Code of discipline، مواعيد اجتماع أسبوعية، Biblical study خاصة بالخدام، Prayer time، Communication flow، Hierarchy وتقسيم Teams، وبناء هوية الخدمة (Branding، ألوان، وجود على الأرض، وMascot اسمه «مورو» كمثال: بيُستخدم في الترويج وفي السيستم وفي الثيم).
+٢. الهيكل العظمي (Skeleton)، وهي الـBiblical skills: مهارات الدراسة والتعمق عشان الخدام يستندوا للكتاب ويخرجوا منه بصورة سليمة.
+٣. الجسد (Body)، وهي الـTechnical skills: مهارات مكملة مش في دراسة الكتاب: AI literacy، Prompt creation and development، Educational psychology، مواكبة تطور جيل ألفا.
 
 بذور مني (اقتراح، قيّمها وزوّد عليها ما تراه ناقصاً):
 - Biblical: طريقة القراءة «أقرأ ← أدرس ← أفهم ← أعيش ← أكرز»، قراءة الخرائط والخلفيات، ربط العهدين برموز مضبوطة (حدث تاريخي + شهادة العهد الجديد/التقليد + المسيح محور)، التعامل مع الأسئلة الصعبة بالدليل، الرجوع لكتابات الآباء.

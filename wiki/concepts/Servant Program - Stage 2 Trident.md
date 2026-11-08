@@ -14,11 +14,20 @@ sources: "[[2026-11-08 - Vision Voice Note (transcript)]] is the primary source:
 ---
 
 ## For future agent
-Stage 2 of the Servant Program run, written to follow the owner's voice note: the preparation program built on the Trident (three axes: Structure, Biblical skills, Technical skills). For each axis it lists first what the owner said, then how it becomes modules and outputs, then extra skills he asked the AI to suggest (marked اقتراح). Session counts and lengths are estimates because the transcript gives none. Previous: [[Servant Program - Stage 1b Theme]].
+Stage 2 of the Servant Program run, written to follow the owner's voice note: the preparation program built on the Trident (three axes, renamed on 2026-11-08 as a body: Spirit = Structure plus goals and axes, Skeleton = Biblical skills, Body = Technical skills). For each axis it lists first what the owner said, then how it becomes modules and outputs, then extra skills he asked the AI to suggest (marked اقتراح). Session counts and lengths are estimates because the transcript gives none. Previous: [[Servant Program - Stage 1b Theme]].
 
 # المرحلة ٢: برنامج Trident (مبني على التسجيل)
 
 > **ملاحظة:** هذه المرحلة تلتزم بنص التسجيل. المرحلتان ١ و١ب فيهما إضافات مني (أدوار مثل أمين الخدمة، ومسؤول حماية، واتجاهات الثيم الثلاثة). لم يقلها التسجيل حرفياً؛ يمكن تقليصها لو تحب.
+
+## التسمية الجديدة: روح وهيكل وجسد (تعديل ٢٠٢٦-١١-٠٨)
+صاحب الخدمة طلب أن تُسمّى المحاور الثلاثة بثلاثة تعبيرات:
+| التعبير | هو | يشمل |
+|---|---|---|
+| **الروح (Spirit)** | Structure سابقاً | البنية (Code، مواعيد، صلاة، تواصل، Hierarchy، Teams، الهوية) **والأهداف والمحاور** |
+| **الهيكل العظمي (Skeleton)** | Biblical skills سابقاً | مهارات دراسة الكتاب والتعمق |
+| **الجسد (Body)** | Technical skills سابقاً | AI literacy، Prompts، علم نفس التعليم، جيل ألفا، وما يقترح |
+**غير مؤكد:** عبارة «الجولز والاكسس بتاعة الاستراكشر» فهمتُها «الأهداف (goals) ومحاور (axes) البنية». لو قصدت access (صلاحيات)، قل لي.
 
 ## ما قاله التسجيل عن شكل البرنامج
 - هدف أول: **أفهمهم الرؤية وأدخلهم فيها**، وأفهمهم إننا هنشتغل بـ Trident (٣ محاور).
@@ -26,7 +35,7 @@ Stage 2 of the Servant Program run, written to follow the owner's voice note: th
 - **تقييم نفسي وقدرات** (psychological and capability building skill assessment) ← على أساسه ننزّل كل خادم في **حارة/Persona** ← يتقسموا **تيمز وفرق** على أرض الواقع.
 - الحارات: **٥ حارات متوازية**، واحدة لكل Persona.
 
-## المحور ١: Structure
+## المحور ١: الروح (Spirit): البنية والأهداف والمحاور
 **من التسجيل (بنفس كلامه):** Code of conduct أو Code of discipline · مواعيد اجتماع أسبوعية · Biblical study خاصة بينا · Prayer time · Communication flow · Hierarchy · تقسيم كـ Teams · بناء **هوية الخدمة**: Branding، Colors، **Mascot/Character (مثل «مورو»)**، وPresence على الأرض.
 
 | وحدة | المحتوى | المخرج القابل للقياس |
@@ -36,9 +45,10 @@ Stage 2 of the Servant Program run, written to follow the owner's voice note: th
 | ١-٣ Communication flow | قنوات التواصل وقواعدها | صفحة واحدة تشرح التدفق |
 | ١-٤ Hierarchy وTeams | من يتبع من، توزيع الفرق (بعد التقييم) | مخطط هيكل بالأسماء |
 | ١-٥ الهوية | Branding وألوان وMascot (مورو) وحضور على الأرض | حزمة هوية أولية (Brand kit v0) |
+| ١-٦ الأهداف والمحاور | أهداف الخدمة ومحاور البنية (**TBD**: يحددها صاحب الخدمة؛ لم أكتب لها محتوى) | وثيقة «أهدافنا ومحاورنا» |
 الهوية مرتبطة بـ[[Servant Program - Stage 1b Theme]] لما تختار اتجاه الثيم (ألوان ومورو منه).
 
-## المحور ٢: Biblical skills
+## المحور ٢: الهيكل العظمي (Skeleton): المهارات الكتابية
 **من التسجيل:** مهارات للدراسة وللتعمق، عشان الخدام يقدروا **يستندوا للكتاب** (التفريغ: «يستدوا») **ويخرجوا بصورة كويسة** (الجملة غير واضحة تماماً، فسّرتُها: يستنبطون من الكتاب ويقدمونه جيداً).
 **وهدف الـ٧ سنين:** دراسة الكتاب **بانورامياً وبعمق (T-strategy)**؛ فالخدام يتدربون أنفسهم على الاثنين.
 
@@ -52,7 +62,7 @@ Stage 2 of the Servant Program run, written to follow the owner's voice note: th
 | ٢-٦ الأسئلة الصعبة (اقتراح) | الرد بالدليل وبهدوء | تمثيل ٣ أسئلة |
 أي إشارة لآباء أو طقس: **يتأكد من الكنيسة**.
 
-## المحور ٣: Technical skills
+## المحور ٣: الجسد (Body): المهارات التقنية
 **من التسجيل:** مهارات **لا تتعلق بدراسة الكتاب** لكنها تكمّله: **AI literacy** · **Prompt creation and development** · فهم **Educational psychology** · مواكبة **تطور جيل ألفا** · «إلى آخره». وطلب صراحة: **يقترح علينا نعلمهم إيه تاني.**
 
 | وحدة | المحتوى | المخرج |
@@ -78,14 +88,15 @@ Stage 2 of the Servant Program run, written to follow the owner's voice note: th
 | أسبوع | المحتوى |
 |---|---|
 | ١ | **الرؤية**: الخدمتان، T-strategy، Trident، الحارات الخمس (من التسجيل) |
-| ٢-٣ | Structure |
-| ٤-٥ | Biblical skills |
-| ٦-٧ | Technical skills |
+| ٢-٣ | الروح (Structure) |
+| ٤-٥ | الهيكل العظمي (Biblical skills) |
+| ٦-٧ | الجسد (Technical skills) |
 | ٨ | **التقييم والتوزيع على الحارات** ثم تكوين الفرق (من التسجيل؛ التفاصيل في المرحلة ٣) |
 **سؤال للتحديد:** التسجيل يقول التقييم «بناءً عليه ننزلهم في الحارة»، ولا يحدد هل يسبق البرنامج أم يتبعه. أضعه في الأسبوع ٨؛ لو تفضل قبل البرنامج ليتخصص كل خادم، قل لي.
 
 ## قرارات محتاجة منك
 - [ ] أي اقتراحات التقنية نأخذ؟
+- [ ] «الاكسس» في الروح: محاور (axes) أم صلاحيات (access)؟ وما الأهداف والمحاور المطلوب كتابتها؟
 - [ ] مدة البرنامج وموعد جلساته (غير مذكورة في التسجيل).
 - [ ] موعد التقييم: قبل أو بعد؟
 - [ ] هل تقلّص إضافات المرحلتين ١ و١ب لتبقى على التسجيل فقط؟
