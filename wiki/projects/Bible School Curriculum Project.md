@@ -84,6 +84,7 @@ Hub note for the AAMC Bible School project: (updated 2026-11-08 to match the chu
 - **الروح تضم:** Mission، Vision، Culture، Identity، Branding، Communication flow، وكودها **«Without system everything dies»**. «الاكسس» = axes.
 - **الهيكل العظمي:** كوده **«Walk the Talk»**: تقديم الدرس بسهولة وجاذبية؛ نظامان معاً (الـ What = القصة الكتابية أثناء التحضير، والـ How = طريقة التحضير نموذج للتقديم)؛ البوت كامب يعلّم الـ How والـ What مدمج فيه. وحدة ٢-٧ مقترحة.
 - **دراسة الكتاب (الهيكل العظمي):** عقلية القراءة، تناول تفاعلي، تفكير نقدي، بحث نقدي (وحدات ٢-٨ إلى ٢-١١ مقترحة؛ v1.6).
+- **الجسد (مهارات تقنية جديدة):** organizational، primitive design، R&D، think tank، market intelligence. بحث وتطبيق مقترح: [[Body Axis - Five Skills Research and Structure]].
 - **بناء أي تيم** على مراحل Tuckman: Forming ← Storming ← Norming ← Performing، تُطبَّق على كل تيم ومجموعة الخدام كلها. المدد والمعايير مقترحة: [[Team Stages - Evaluation and Milestones]].
 - **نموذج RASCI** على محور الروح: [[Spirit Axis - RASCI Structure and KPIs]] (مصفوفة، إرشادات، KPIs؛ مقترح).
 - **شخص جديد:** [[Michael Safwat]] = المسؤول عن التكوين، للخدام فقط حالياً، والـ A في Mission/Vision/Culture.

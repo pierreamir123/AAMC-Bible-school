@@ -60,5 +60,6 @@ Catalog of every note in the AAMC Bible School vault, grouped by folder. Read th
 - [[Servant Preparation Program - Deliverables]] - finished servant preparation program: 4 versioned PDFs in Deliverables/ (latest v1.6)
 - [[Team Stages - Evaluation and Milestones]] - Forming/Storming/Norming/Performing: min durations, exit milestones, 5-item team check (proposal)
 - [[Spirit Axis - RASCI Structure and KPIs]] - RASCI matrix, guidelines, structure layers and KPIs for the Spirit axis (proposal)
+- [[Body Axis - Five Skills Research and Structure]] - researched: organizational, basic design, R&D, think tank, market intelligence; proposed units 3-5..3-9 (as of 2026-11-08)
 - [[Diagrams - Index]] - ten clean Excalidraw diagrams of the service (Diagrams/); old canvases archived
 - [[Deliverables/Vault Notes PDF/README]] - PDF export of all notes (v1.0: 28 PDFs + combined)
