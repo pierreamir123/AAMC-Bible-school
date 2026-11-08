@@ -1,7 +1,7 @@
 # الإصدار الأحدث
 
-**v1.2** · 2026-11-08
+**v1.4** · 2026-11-08
 
-المجلد: `v1.2/`
+المجلد: `v1.4/`
 
-تسمية محاور Trident: الروح (البنية والأهداف والمحاور) والهيكل العظمي (المهارات الكتابية) والجسد (المهارات التقنية)
+Team-building stages: Forming, Storming, Norming, Performing (applies to every team and the whole group)

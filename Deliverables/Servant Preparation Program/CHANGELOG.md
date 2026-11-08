@@ -2,6 +2,16 @@
 
 الأحدث أولاً. كل إصدار في مجلده ولا يُستبدل.
 
+## v1.4 · 2026-11-08
+- **ملاحظة:** Team-building stages: Forming, Storming, Norming, Performing (applies to every team and the whole group)
+- **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (2 lines)
+- **الملفات:** `01 - Program Handbook (v1.4).pdf` · `02 - Session Plans (v1.4).pdf` · `03 - Assessment Kit (v1.4).pdf` · `04 - Templates and Handouts (v1.4).pdf`
+
+## v1.3 · 2026-11-08
+- **ملاحظة:** Spirit axis: Mission, Vision, Culture, Identity, Branding, Communication flow + code Without system everything dies
+- **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (8 lines), 02-session-plans.md (4 lines)
+- **الملفات:** `01 - Program Handbook (v1.3).pdf` · `02 - Session Plans (v1.3).pdf` · `03 - Assessment Kit (v1.3).pdf` · `04 - Templates and Handouts (v1.3).pdf`
+
 ## v1.2 · 2026-11-08
 - **ملاحظة:** تسمية محاور Trident: الروح (البنية والأهداف والمحاور) والهيكل العظمي (المهارات الكتابية) والجسد (المهارات التقنية)
 - **ملفات تغيّرت عن الإصدار السابق:** 01-handbook.md (22 lines), 02-session-plans.md (12 lines)
