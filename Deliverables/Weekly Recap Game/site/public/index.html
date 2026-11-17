@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>سباق نحميا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+/* نفس هوية ورشة الهوية: كريمي / عنابي / ذهبي. تعمل أوفلاين (الخطوط بتتحول لخطوط الجهاز) */
+:root{
+  --bg:#fff7e6; --surface:#fffdf7; --surface2:#f6e9c9; --fg:#2a0b10; --muted:#7a5a5f; --line:#e3cf9f;
+  --pri:#7a1c2b; --on-pri:#fff7e6; --hi:#c9961f; --hi-ink:#7d5a0a; --ok:#2f7a4b; --warn:#b3541e; --ink:#1c0407;
+  --display:"Aref Ruqaa","IBM Plex Sans Arabic",Tahoma,serif; --text:"IBM Plex Sans Arabic",Tahoma,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#1c0407; --surface:#2a0a10; --surface2:#3a1019; --fg:#fff7e6; --muted:#c9a9a0; --line:#5a2430;
+  --pri:#d9a93a; --on-pri:#230509; --hi:#d9a93a; --hi-ink:#e8c36a; --ok:#6fcf97; --warn:#f2994a; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--text);font-size:16px;line-height:1.7;
+  padding:16px max(16px,env(safe-area-inset-right)) 120px max(16px,env(safe-area-inset-left))}
+.wrap{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1,h2{font-family:var(--display);margin:0;line-height:1.35;text-wrap:balance}
+h1{font-size:1.9rem}h2{font-size:1.4rem}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:40px;height:40px;flex:none;color:var(--hi)}
+.sub{color:var(--muted);margin:0;font-size:.95rem}
+.pill{font-size:.9rem;padding:2px 12px;border:2px solid var(--ink);background:var(--surface);font-variant-numeric:tabular-nums}
+.px{border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink);border-radius:2px;background:var(--surface)}
+.hud{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--ink);color:#ffe9b0;padding:6px 10px;font-weight:600;font-size:.95rem;border:3px solid var(--ink)}
+.slots{display:flex;gap:4px}
+.slots i{width:18px;height:12px;background:#3a1019;border:2px solid #5a2430}
+.slots i.on{background:#b08968;border-color:#ffd966;animation:pop .4s steps(3)}
+#snd{background:none;border:0;color:inherit;font-size:1.1rem;cursor:pointer;padding:0 4px}
+canvas{width:100%;display:block;image-rendering:pixelated;image-rendering:crisp-edges;background:#2a0a10;border:3px solid var(--ink);box-shadow:0 4px 0 var(--ink)}
+.card{padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-height:160px}
+.tag{color:var(--hi-ink);font-weight:600;font-size:.9rem}
+.hint{color:var(--muted);margin:0}
+.scene{margin:0;background:var(--surface2);border:2px solid var(--line);padding:6px 10px;font-size:.95rem}
+.pt{display:flex;gap:10px;align-items:flex-start;margin:0 0 6px;padding:8px 10px;border:2px dashed var(--line);color:var(--muted)}
+.pt.got{border:2px solid var(--hi);background:var(--surface2);color:var(--fg);animation:pop .4s steps(3)}
+.coin{flex:none;width:14px;height:18px;margin-top:5px;background:#ffd966;border:2px solid #7d5a0a;border-radius:50%}
+.coin.dim{opacity:.35}
+.verse{margin:0;padding-inline-start:12px;border-inline-start:4px solid var(--hi);color:var(--hi-ink);font-family:var(--display);font-size:1.15rem}
+.q{margin:0;background:var(--surface2);padding:8px 12px;border:2px solid var(--line)}
+.motto{font-family:var(--display);font-size:1.25rem;background:var(--pri);color:var(--on-pri);padding:6px 12px;text-align:center;animation:pop .4s steps(3)}
+.dock{position:fixed;inset-inline:0;bottom:0;padding:10px 16px max(14px,env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 40%)}
+#go{display:block;width:100%;max-width:560px;margin:0 auto;font:inherit;font-family:var(--display);font-size:1.45rem;min-height:60px;
+  background:var(--pri);color:var(--on-pri);border:3px solid var(--ink);box-shadow:0 6px 0 var(--ink);border-radius:2px;cursor:pointer}
+#go:active:not(:disabled){transform:translateY(5px);box-shadow:0 1px 0 var(--ink)}
+#go:disabled{opacity:.5;box-shadow:0 2px 0 var(--ink)}
+@keyframes pop{from{transform:scale(.85);opacity:0}}
+.end p{margin:0 0 6px}
+button.chip{font:inherit;width:100%;text-align:start;border:2px solid var(--line);background:var(--bg);color:var(--fg);padding:8px 10px;margin:0 0 6px;cursor:pointer}
+button.chip[aria-pressed=true]{border-color:var(--hi);background:var(--surface2);box-shadow:0 0 0 2px var(--hi) inset}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M17 4h6v10h10v6H23v16h-6V20H7v-6h10z" stroke-linejoin="round"/></svg>
+      <div><h1>سباق نحميا</h1><p class="sub">٥ دقايق · مراجعة سفر نحميا ١–٥</p></div>
+    </div>
+    <span class="pill" id="clk">⏱ ٠:٠٠</span>
+  </header>
+  <div class="hud"><span>عالم <b id="w">١-١</b></span><span>🪙 ×<b id="coins">٠٠</b></span><span class="slots" id="slots"></span><button id="snd" aria-label="الصوت">🔇</button></div>
+  <canvas id="cv" aria-label="نحميا بيجري ويبني السور"></canvas>
+  <section class="px card" id="card"></section>
+</div>
+<div class="dock"><button id="go">اضغط ابدأ ▶</button></div>
+
+<script>
+/* ===== محتوى الأسبوع (مختصر): عدّل هنا كل أسبوع فقط ===== */
+const R=[
+ {ch:1,title:"عبء الصلاة وتحمّل المسؤولية",motto:"الخدمة تبدأ على الركب قبل الأقدام",
+  scene:"المشهد: حناني بيجيب الخبر، السور مهدوم والبوابات محروقة، ونحميا بيبكي ويصلي.",
+  pts:["قلبه وجع على أورشليم رغم راحته في القصر: اهتمام بالآخرين.","أول رد فعل: صلاة وصوم، وتمسّك بوعود الله، قبل أي خطوة.","اعترف «أنا وبيت أبي أخطأنا»: قائد بيتحمل المسؤولية ومش بيلوم."],
+  verse:"«جَلَسْتُ وَبَكَيْتُ وَنُحْتُ أَيَّاماً، وَصُمْتُ وَصَلَّيْتُ أَمَامَ إِلَهِ السَّمَاءِ» (١: ٤)",
+  q:"لما بنواجه أزمة في الخدمة، إزاي ندرّب نفسنا يكون رد فعلنا الأول هو الصلاة زي نحميا؟"},
+ {ch:2,title:"التخطيط الحكيم والانطلاق للعمل",motto:"إله السماء يعطينا النجاح ونحن نقوم ونبني",
+  scene:"المشهد: الملك أرتحشستا بيسأل نحميا، ونحميا بيصلي صلاة سهمية وبياخد رسائل الملك.",
+  pts:["٤ شهور صلاة، وبعدها «صلاة سهمية» في ثانية قدام الملك.","صلاة + تخطيط: كان جاهز بطلبات محددة، ودرس الواقع بهدوء بالليل قبل ما يتكلم.","شارك الرؤية فتشجعوا وقالوا «لنقم ولنبنِ»، وردّ على السخرية بيقين."],
+  verse:"«إِنَّ إِلَهَ السَّمَاءِ يُعْطِينَا النَّجَاحَ، وَنَحْنُ عَبِيدُهُ نَقُومُ وَنَبْنِي» (٢: ٢٠)",
+  q:"إزاي نوزن بين حماس البدايات وبين إننا نفهم احتياج مخدومينا ونخطط كويس قبل ما نندفع؟"},
+ {ch:3,title:"العمل الجماعي وتكامل الأدوار",motto:"كل واحد يبني مقابل بيته حسب موهبته",
+  scene:"المشهد: الكاهن والصائغ والبنت، كلهم بيبنوا مع بعض، كل واحد في دوره.",
+  pts:["القدوة من القادة: الكهنة بدأوا البناء أول.","كل موهبة لها مكان: الصائغ والعطار وحتى البنات.","كل واحد يبني مقابل بيته، وبحمية: الأمانة تبدأ من دايرتنا القريبة."],
+  verse:"«رَمَّمَ بِحَمِيَّةٍ» (٣: ٢٠)",
+  q:"إيه الموهبة أو الحاجة اللي إنت شاطر فيها وتقدر تخدم بيها الفريق؟"},
+ {ch:4,title:"الصمود أمام السخرية وتعب منتصف الطريق",motto:"يد تبني ويد تمسك السلاح",
+  scene:"المشهد: سنبلط وطوبيا بيسخروا، والحارس واقف بالرمح، والبوق جاهز يطلب المساعدة.",
+  pts:["السخرية اتحولت لصلاة مش جدال، و«كان للشعب قلب في العمل».","لما اشتكوا من «كثرة التراب» رفع أنظارهم لعظمة الله.","يد تبني ويد تمسك السلاح: صلاة + يقظة، ومفيش حد شايل همه لوحده (البوق)."],
+  verse:"«إِلَهُنَا يُحَارِبُ عَنَّا» (٤: ٢٠)",
+  q:"إيه أكتر ضغط بيتعبك في الخدمة («كثرة التراب»)، وإزاي نرفع عينينا لعظمة ربنا؟"},
+ {ch:5,title:"الاستقامة وحل الخلافات الداخلية",motto:"خدمة بلا أنانية وشهادة بلا عثرة",
+  scene:"المشهد: فقير جعان وغني معاه فلوس، ونحميا بيتنازل عن حقه ويأكل الناس على مائدته.",
+  pts:["أخطر التحديات من الداخل: استغلال الأغنياء لإخوتهم الفقراء.","«فتشاورت في قلبي»: هدى وفكر قبل ما يواجه، وحافظ على الشهادة قدام الخارج.","قدوة بالتنازل عن حقه، وطلب المكافأة من الله وحده."],
+  verse:"«اذْكُرْ لِي يَا إِلَهِي لِلْخَيْرِ كُلَّ مَا عَمِلْتُ لِهَذَا الشَّعْبِ» (٥: ١٩)",
+  q:"لو حصل سوء تفاهم بيننا كخدام، إزاي نطبّق «فتشاورت في قلبي» (نهدى ونفكر الأول) قبل ما نتكلم؟"}
+];
+/* ===== نهاية المحتوى ===== */
+
+const $=id=>document.getElementById(id),AR=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const W=160,H=90,GR=70,BY=28,K='#1c0407',bx=i=>60+i*120,POLE=bx(R.length-1)+92,WW=POLE+40;
+const cv=$('cv'),g=cv.getContext('2d');cv.width=W;cv.height=H;
+const rect=(c,x,y,w,h)=>{g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),w,h)};
+const disc=(cx,cy,r,c)=>{for(let d=-r;d<=r;d++){const h=Math.round(Math.sqrt(r*r-d*d));rect(c,cx-h,cy+d,h*2+1,1)}};
+
+/* ===== نحميا: pixel art ١٢×١٦ ===== */
+const PAL={k:K,h:'#e0b040',H:'#b8860b',s:'#e8b07a',b:'#4a2c1a',r:'#a02438',R:'#5e1220',g:'#ffd966',t:'#6b4423'};
+const BODY=["...kkkkkk...","..khhhhhhk..","..kHHHHHHk..","..kssssssk..","..ksskssksk.","..kbbbbbbk..","..kbbbbbbk..",".kkrrrrrrkk.",".krrrggrrrk.",".krrrrrrrrk.",".ksrrggrrsk.",".krrrrrrrrk.",".kRRRRRRRRk.","..kRRRRRRk.."];
+const LEG={a:["..ktt..ttk..","..kkk..kkk.."],b:["...kttttk...","...kkkkkk..."],j:[".ktt....ttk.",".kkk....kkk."]};
+function rows(map,x,y){map.forEach((row,ry)=>{for(let rx=0;rx<12;rx++){const c=row[rx];if(c!=='.')rect(PAL[c],x+rx,y+ry,1,1)}})}
+function drawHero(){const x=Math.round(hero.x-cam),y=Math.round(hero.y-16),act=st.phase==='coins'||st.phase==='next';
+  if(st.c===0&&act&&!hero.air){ /* نحميا راكع بيصلي: إيدين مرفوعة + نور من فوق + دموع */
+    rect('rgba(255,217,102,.22)',x+2,0,8,y+2);rows(BODY,x,y+2);rect(PAL.t,x+2,y+15,8,1);rect(PAL.s,x,y+4,1,5);rect(PAL.s,x+11,y+4,1,5);
+    const d=(fr>>2)%6;rect('#6ec6ff',x+4,y+7+d,1,1);rect('#6ec6ff',x+8,y+7+((d+3)%6),1,1);return}
+  rows(BODY.concat(hero.air?LEG.j:hero.run&&(fr>>3)%2?LEG.b:LEG.a),x,y-(hero.run&&!hero.air&&(fr>>3)%2?1:0));
+  if(building()&&act){const sw=(fr>>3)%2;rect('#8a8f98',x+13,y+(sw?3:9),3,2);rect(PAL.t,x+12,y+(sw?5:10),1,4);rect(PAL.s,x+11,y+10,1,1)}}
+
+/* ===== شخصيات الحكاية: نفس الستايل (٣×٣ بيكسل للتفاصيل) ===== */
+function person(x,y,o){x=Math.round(x);y=Math.round(y);
+  const px=(c,dx,dy,w=1,h=1)=>rect(c,x+(o.flip?12-dx-w:dx),y+dy,w,h),sk=o.skin||'#e8b07a',a=o.arm||'',sw=(fr>>3)%2;
+  px(K,2,1,8,8);px(sk,3,3,6,5);px(o.hat,3,1,6,3);
+  if(o.crown)[3,5,7,8].forEach(d=>px(o.hat,d,0));
+  if(o.hair){px(o.hair,2,3,1,6);px(o.hair,9,3,1,6)}
+  px(o.eye||K,4,5);px(o.eye||K,7,5);
+  if(o.beard)px(o.beard,3,7,6,2);else px(o.sneer?'#fff':K,5,7,o.sneer?3:2,1);
+  px(K,0,9,12,6);px(o.robe,1,9,10,5);px(o.sash,1,11,10,1);px('#6b4423',3,14,2,2);px('#6b4423',7,14,2,2);
+  if(a==='hammer'){if(sw){px(sk,11,6,1,4);px('#8a8f98',10,4,4,2)}else{px(sk,11,11,1,2);px('#8a8f98',11,13,4,2)}}
+  else if(a==='cup'){px(sk,11,10,2,1);px('#ffd966',13,8,3,3);px('#fff7e6',14,8,1,1)}
+  else if(a==='horn'){px(sk,10,8,2,1);px('#ffd966',11,7,3,2);px('#ffd966',14,6,2,4)}
+  else if(a==='spear'){px(sk,11,10,1,2);px('#cfd3d8',12,-8,1,26);px('#fff',11,-10,3,2);px('#a02438',-3,9,4,6);px('#ffd966',-2,11,2,2)}
+  else if(a==='point'){px(sk,11,9+sw,4,1)}
+  else if(a==='bowl'){px(sk,11,10,2,1);px('#6b4423',12,11,4,2)}
+  else if(a==='bag'){px(sk,11,10,2,1);px('#7a5a2a',12,10,5,5);px('#ffd966',14,12,1,1)}
+  else{px(sk,0,10,1,2);px(sk,11,10,1,2)}}
+const GL={'!':["..#..","..#..","..#..",".....","..#.."],'?':[".###.","#...#","..##.",".....","..#.."]};
+function bubble(x,y,s){x=Math.round(x);y=Math.round(y);rect(K,x-1,y-1,11,11);rect('#fff7e6',x,y,9,9);rect('#fff7e6',x+3,y+9,3,2);rect(K,x+3,y+11,3,1);
+  GL[s].forEach((r,ry)=>{for(let rx=0;rx<5;rx++)if(r[rx]==='#')rect('#7a1c2b',x+2+rx,y+2+ry,1,1)})}
+function flame(x,y){const f=(fr>>2)%2;rect('#ff7a1a',x,y,3,4+f);rect('#ff7a1a',x+1,y-2-f,1,2);rect('#ffd966',x+1,y+1,1,2);
+  for(let k=0;k<3;k++){const o=((fr>>1)+k*7)%20;rect('rgba(90,70,70,.7)',x-1+((k*3)%4),y-5-o,2,2)}}
+
+/* ===== مشهد كل إصحاح (مرسوم في العالم نفسه) ===== */
+function scene(i){const sx=bx(i)-cam,py=GR-16,hz=building()&&st.c===i;
+  if(sx>W+20||sx<-130)return;
+  if(i===0){ /* بوابات محروقة + حناني بيجيب الخبر */
+    const fire=seg[0].n<TOT-8;
+    rect('#2a1d1d',sx+66,GR-26,5,26);rect('#2a1d1d',sx+90,GR-26,5,26);rect('#2a1d1d',sx+66,GR-28,12,3);
+    if(fire){flame(sx+67,GR-33);flame(sx+91,GR-33)}else{rect('#6b4423',sx+71,GR-22,19,22);rect('#4a2c12',sx+80,GR-22,1,22);rect('#ffd966',sx+77,GR-10,2,2);rect('#ffd966',sx+83,GR-10,2,2)}
+    person(sx+36,py,{hat:'#8a8a8a',robe:'#8d6e63',sash:'#5d4037',beard:'#777',flip:1,arm:'point'});
+    if(st.c===0&&(st.phase==='run'||st.phase==='jump'))bubble(sx+36,py-14,'!')}
+  if(i===1){ /* الملك على عرشه + رسالة الملك */
+    rect(K,sx+60,GR-34,20,34);rect('#7a1c2b',sx+61,GR-33,18,33);rect('#ffd966',sx+61,GR-33,18,2);rect('#ffd966',sx+61,GR-33,2,33);rect('#ffd966',sx+77,GR-33,2,33);
+    person(sx+64,py,{hat:'#ffd966',crown:1,robe:'#4a2a8a',sash:'#ffd966',beard:'#2a1a0a',arm:'cup',flip:1});
+    if(st.c===1&&(st.phase!=='coins'&&st.phase!=='next'||st.k<1))bubble(sx+66,py-14,'?');
+    if(st.c===1&&st.k>=2||i<st.c){const by=GR-30+Math.round(Math.sin(fr/12)*2);rect(K,sx+34,by-1,12,8);rect('#fff7e6',sx+35,by,10,6);rect('#c9961f',sx+34,by-1,2,8);rect('#c9961f',sx+44,by-1,2,8);rect('#7a1c2b',sx+38,by+2,4,1)}}
+  if(i===2){ /* ٣ بنّائين: كاهن وصائغ وبنت */
+    const w=hz?'hammer':'';
+    person(sx+30,py,{hat:'#fff7e6',robe:'#f2ead8',sash:'#ffd966',beard:'#cfcfcf',flip:1,arm:w});
+    person(sx+50,py,{hat:'#ffd966',robe:'#d9822b',sash:'#6b4423',flip:1,arm:w});
+    person(sx+70,py,{hat:'#d96a8a',hair:'#5a2e1a',robe:'#e58fb0',sash:'#fff7e6',flip:1,arm:w});
+    if(hz&&(fr>>3)%2)[[36,GR-4],[56,GR-4],[76,GR-4]].forEach(([dx,dy])=>{rect('#ffe9b0',sx+dx,dy,1,1);rect('#ffe9b0',sx+dx+2,dy-1,1,1)})}
+  if(i===3){ /* حارس برمح + بوق + سنبلط وطوبيا بيسخروا */
+    person(sx+28,py,{hat:'#9aa0a6',robe:'#5e6a7a',sash:'#9aa0a6',arm:'spear',flip:1});
+    person(sx+46,py,{hat:'#a02438',robe:'#7a1c2b',sash:'#ffd966',arm:'horn',flip:1});
+    if(st.c===3&&(st.phase==='coins'||st.phase==='next')){const n=1+((fr>>3)%3);for(let k=0;k<n;k++)rect('#ffd966',sx+34-k*4,py+4-k,1,3+k*2)}
+    person(sx+70,py,{hat:'#2b2b3a',robe:'#3d3d52',sash:'#6b1a1a',sneer:1,eye:'#ff4040',beard:'#111',arm:'point',flip:1});
+    person(sx+88,py,{hat:'#2f4f2f',robe:'#3f6a3f',sash:'#6b1a1a',sneer:1,eye:'#ff4040',arm:'point',flip:1});
+    if(st.c===3){if((fr>>5)%2)bubble(sx+72,py-14,'!');else bubble(sx+90,py-14,'!')}}
+  if(i===4){ /* فقير جعان، مائدة نحميا (خبز)، وغني معاه كيس فلوس */
+    person(sx+34,py,{hat:'#6b5a4a',robe:'#7a6a55',sash:'#5a4a3a',arm:'bowl',flip:0});
+    rect('#6b4423',sx+48,GR-9,22,2);rect('#6b4423',sx+50,GR-7,2,7);rect('#6b4423',sx+66,GR-7,2,7);
+    const n=st.c===4?st.k:3;for(let k=0;k<Math.min(3,n);k++){rect('#b8782f',sx+50+k*7,GR-13,6,4);rect('#d9a05b',sx+51+k*7,GR-13,4,2)}
+    person(sx+76,py,{hat:'#ffd966',robe:'#6a2a8a',sash:'#ffd966',beard:'#222',arm:'bag',flip:1})}
+}
+
+/* ===== السور: بيتبني حجر حجر مع كل درس (٣ دفعات لكل إصحاح) ===== */
+const SEGW=12,ROWS=6,CELLS=[];for(let r=0;r<ROWS;r++)for(let c=0;c<SEGW;c++)CELLS.push([c,r]);for(let c=1;c<SEGW;c+=2)CELLS.push([c,ROWS]);
+const TOT=CELLS.length,RH=R.map((_,i)=>Array.from({length:SEGW},(_,c)=>(i*5+c*7+c*c*3)%4));
+const seg=R.map(()=>({n:0}));
+function stone(x,y,w,h,a,b){rect(a,x,y,w,h);rect(b,x,y+h-1,w,1);rect(b,x+w-1,y,1,h);rect(b,x+Math.floor(w/2),y,1,Math.floor(h/2))}
+function drawSeg(i){const x0=bx(i)-30-cam;if(x0>W||x0<-122)return;const n=Math.floor(seg[i].n);
+  CELLS.forEach(([c,r],idx)=>{const x=x0+c*10,y=GR-(r+1)*6;
+    if(idx<n)stone(x,y,10,6,'#b08968','#6f4e37');else if(r<RH[i][c])stone(x,y,10,6,'#4a3a38','#2a1d1d')})}
+function target(i){if(st.phase==='fin'||st.phase==='done')return TOT;if(i<st.c)return TOT;
+  return i===st.c&&(st.phase==='coins'||st.phase==='next')?Math.round(TOT*st.k/3):0}
+const building=()=>seg[st.c]&&seg[st.c].n<target(st.c)-.5;
+function drawPole(){const x=POLE-cam,f=st.fin?st.fin.flag:0;rect('#ffd966',x,GR-58,2,58);rect('#fff0b3',x-1,GR-60,4,3);
+  const fy=GR-12-Math.round(f*40);if(f>0){for(let r=0;r<10;r++)rect('#a02438',x-(12-r),fy+r,12-r,1);rect('#fff7e6',x-7,fy+1,1,4);rect('#fff7e6',x-9,fy+2,5,1)}}
+
+/* ===== الحالة والرسم ===== */
+const hero={x:10,y:GR,vy:0,air:false,run:false,tx:null,cb:null};
+const st={c:0,phase:'title',k:0,coins:0,t0:0,fin:null};
+const blocks=R.map(()=>({used:false,bump:0})),pops=[],stars=Array.from({length:26},(_,i)=>[(i*53)%160,(i*29)%40]);
+let cam=0,fr=0;
+function drawBlock(i){const b=blocks[i],x=bx(i)-cam,y=BY-Math.round(Math.sin(b.bump/6*Math.PI)*4);
+  if(b.used){stone(x,y,16,16,'#7a1c2b','#3a0a12');rect('#ffd966',x+1,y+1,14,1);return}
+  rect('#7d5a0a',x,y,16,16);rect('#ffd966',x+1,y+1,14,14);rect('#fff0b3',x+1,y+1,14,1);
+  [".###.","#...#","....#","..##.","..#..",".....","..#.."].forEach((r,ry)=>{for(let rx=0;rx<5;rx++)if(r[rx]==='#')rect('#7a1c2b',x+5+rx,y+4+ry,1,1)})}
+function sky(){rect('#2a0a10',0,0,W,H);rect('#3a1019',0,40,W,30);
+  stars.forEach(([sx,sy],i)=>{const x=((sx-cam*.1)%160+160)%160;if((fr>>5)%2||i%3)rect('#ffe9b0',x,sy,1,1)});
+  const at=i=>120-(cam-(bx(i)-57))*.25;
+  const mx=at(1);if(mx>-12&&mx<172){disc(Math.round(mx),14,6,'#fff0b3');disc(Math.round(mx)+3,12,5,'#2a0a10')}   /* قمر: فحص السور بالليل */
+  const sxn=at(2);if(sxn>-14&&sxn<174){disc(Math.round(sxn),14,6,'#ffd966');[[-10,0],[10,0],[0,-10],[0,10]].forEach(([a,b])=>rect('#ffd966',sxn+a,14+b,2,2))}  /* شمس: يوم عمل */
+  [[30,70,28],[120,90,38],[210,64,24],[300,96,34]].forEach(([cx,w,h])=>{const px=Math.round(((cx-cam*.3)%360+360)%360-30);
+    for(let d=0;d<h;d++){const t=d/h,half=Math.round(w/2*Math.sqrt(1-(1-t)*(1-t)));rect('#4d0f1a',px-half,GR-h+d,half*2,1)}});
+  [[20,14],[110,24],[200,10]].forEach(([cx,cy])=>{const x=Math.round(((cx-cam*.5)%240+240)%240-30);rect('#5a2430',x,cy,18,4);rect('#5a2430',x+4,cy-3,10,3)})}
+function draw(){fr++;sky();
+  R.forEach((_,i)=>drawSeg(i));
+  for(let x=-(Math.round(cam)%20);x<W;x+=20){stone(x,GR,20,10,'#c9961f','#7d5a0a');stone(x-10,GR+10,20,10,'#c9961f','#7d5a0a')}
+  R.forEach((_,i)=>scene(i));drawPole();R.forEach((_,i)=>drawBlock(i));
+  pops.forEach(p=>{const x=p.x-cam;rect('#ffd966',x+1,p.y,2,1);rect('#ffd966',x,p.y+1,4,4);rect('#fff0b3',x+1,p.y+1,1,3);rect('#ffd966',x+1,p.y+5,2,1)});
+  drawHero()}
+
+function tick(){
+  if(hero.tx!=null){if(hero.x<hero.tx){hero.x=Math.min(hero.tx,hero.x+1.4);hero.run=true}else{hero.run=false;const f=hero.cb;hero.tx=hero.cb=null;f&&f()}}
+  if(hero.air){hero.vy+=.28;hero.y+=hero.vy;
+    if(hero.vy<0&&st.phase==='jump'&&hero.y-16<=BY+16&&Math.abs(hero.x+6-(bx(st.c)+8))<12){hero.vy=1.5;bump()}
+    if(hero.y>=GR){hero.y=GR;hero.air=false;hero.vy=0}}
+  blocks.forEach(b=>{if(b.bump>0)b.bump--});
+  for(let i=pops.length;i--;){pops[i].y-=1;if(pops[i].y<BY-26)pops.splice(i,1)}
+  seg.forEach((s,i)=>{const t=target(i);if(s.n<t){s.n=Math.min(t,s.n+1.4);if(fr%6==0)beep(260+(s.n%12)*18,.03)}});
+  const f=st.fin;if(f&&f.on){if(f.flag<1)f.flag=Math.min(1,f.flag+.02);else if(!f.done){f.done=true;hero.vy=-3;hero.air=true;beep(880,.3);endScreen()}}
+  cam+=(Math.max(0,Math.min(WW-W,hero.x-55))-cam)*.12;
+  draw();requestAnimationFrame(tick)}
+
+/* صوت اختياري (مقفول افتراضياً عشان الاجتماع) */
+let ac,snd=false;
+function beep(f,d=.1){if(!snd)return;try{ac=ac||new AudioContext();const o=ac.createOscillator(),v=ac.createGain();o.type='square';o.frequency.value=f;v.gain.value=.04;o.connect(v);v.connect(ac.destination);o.start();o.stop(ac.currentTime+d)}catch(e){}}
+$('snd').onclick=()=>{snd=!snd;$('snd').textContent=snd?'🔊':'🔇';beep(660)};
+
+/* تدفق اللعبة */
+const B=$('go');
+const btn=(t,d)=>{B.textContent=t;B.disabled=!!d};
+const hud=()=>{$('coins').textContent=AR(String(st.coins).padStart(2,'0'));$('w').textContent=AR(Math.min(st.c+1,R.length))+'-١';
+  $('slots').innerHTML=R.map((_,i)=>`<i class="${i<st.c||(i==st.c&&st.k>=3)?'on':''}"></i>`).join('')};
+function card(){const r=R[st.c],el=$('card');
+  let h=`<div class="tag">عالم ${AR(st.c+1)}-١ · نحميا ${AR(r.ch)}</div><h2>${r.title}</h2>`;
+  if(st.phase==='run')h+=`<p class="scene">${r.scene}</p><p class="hint">نحميا بيجري ناحية صندوق الدرس… 🏃</p>`;
+  else if(st.phase==='jump')h+=`<p class="scene">${r.scene}</p><p class="hint">اضغط «اقفز» واضرب الصندوق ⬆</p>`;
+  else{h+=r.pts.map((p,i)=>i<st.k?`<p class="pt got"><i class="coin"></i><span>${p}</span></p>`:`<p class="pt"><i class="coin dim"></i><span>؟</span></p>`).join('');
+    if(st.k>=3)h+=`<div class="motto">🏅 ${r.motto}</div><p class="verse">${r.verse}</p><p class="q"><b>سؤال للفريق:</b> ${r.q}</p>`}
+  el.innerHTML=h;hud()}
+function title(){$('card').innerHTML=`<h2>ساعد نحميا يبني السور 🧱</h2><p>٥ عوالم = ٥ إصحاحات. في كل عالم: اضرب صندوق الدرس واجمع ٣ عملات (٣ دروس)، ومع كل درس السور بيتبني حجر حجر قدامك. مفيش امتحان، دي مراجعة سريعة نثبّت بيها اللي اتعلمناه.</p><p class="hint">آخر اللعبة: ارفع العلم على السور كله 🚩</p>`;hud()}
+function runTo(i){st.phase='run';btn('نحميا بيجري… 🏃',1);card();hero.tx=bx(i)+2;hero.cb=()=>{st.phase='jump';btn('⬆ اقفز!');card()}}
+function bump(){blocks[st.c].bump=6;blocks[st.c].used=true;pops.push({x:bx(st.c)+6,y:BY});beep(988,.08);setTimeout(()=>beep(1319,.2),80);
+  st.phase='coins';st.k=0;btn('🪙 هات الدرس ١ من ٣');card()}
+function endScreen(){let pick=-1;const el=$('card');
+  const draw=()=>{el.className='px card end';el.innerHTML=`<h2>السور اكتمل! 🚩🎉</h2><p class="hint">${AR(st.coins)} عملة في ${$('clk').textContent.slice(2)} دقيقة</p>
+   <div class="tag">شعارات الرحلة</div>${R.map(r=>`<p>🏅 <b>نحميا ${AR(r.ch)}:</b> ${r.motto}</p>`).join('')}
+   <div class="tag">اختار سؤال نفتحه مع بعض دلوقتي</div>${R.map((r,i)=>`<button class="chip" data-i="${i}" aria-pressed="${i==pick}">${r.q}</button>`).join('')}`;
+   el.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{pick=+b.dataset.i;draw()})};
+  draw();st.phase='done';btn('العب تاني 🔄')}
+
+B.onclick=()=>{
+  if(st.phase==='title'){st.t0=Date.now();runTo(0)}
+  else if(st.phase==='jump'){hero.air=true;hero.vy=-3.4;beep(440,.08)}
+  else if(st.phase==='coins'){st.k++;st.coins++;beep(1175,.1);card();
+    if(st.k<3)btn(`🪙 هات الدرس ${AR(st.k+1)} من ٣`);else{st.phase='next';btn(st.c<R.length-1?'كمّل مع نحميا ▶':'🚩 ارفع العلم!')}}
+  else if(st.phase==='next'){if(st.c<R.length-1){st.c++;st.k=0;runTo(st.c)}
+    else{st.phase='fin';st.fin={flag:0,on:false};btn('…',1);$('card').innerHTML='<h2>نحميا بيجري ناحية العلم… 🏃</h2>';hero.tx=POLE-20;hero.cb=()=>{st.fin.on=true}}}
+  else if(st.phase==='done'){Object.assign(hero,{x:10,y:GR,vy:0,air:false,run:false});blocks.forEach(b=>{b.used=false;b.bump=0});seg.forEach(s=>s.n=0);
+    Object.assign(st,{c:0,k:0,coins:0,phase:'title',fin:null,t0:0});$('card').className='px card';title();btn('اضغط ابدأ ▶')}};
+setInterval(()=>{if(st.t0&&st.phase!=='done'){const s=Math.floor((Date.now()-st.t0)/1000);$('clk').textContent='⏱ '+AR(Math.floor(s/60))+':'+AR(String(s%60).padStart(2,'0'))}},1000);
+title();tick();
+</script>
+</body>
+</html>
