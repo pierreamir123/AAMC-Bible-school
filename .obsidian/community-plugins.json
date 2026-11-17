@@ -1,6 +1,5 @@
-[
-  "google-calendar",
-  "git-vault-sync",
-  "github-sync",
-  "obsidian-excalidraw-plugin"
+﻿[
+  "obsidian-excalidraw-plugin",
+  "obsidian-git",
+  "google-calendar"
 ]

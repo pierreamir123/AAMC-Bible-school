@@ -23,7 +23,7 @@ Index of the ten clean Excalidraw diagrams of the Bible school service (big pict
 | 2 | [[Diagrams/02 - Study Service.excalidraw\|02 - Study Service]] | الخدمة الدراسية: ٧ مراحل × ٣ ترمات |
 | 3 | [[Diagrams/03 - Central Service.excalidraw\|03 - Central Service]] | الخدمة المركزية: منتجات Digital وPhysical |
 | 4 | [[Diagrams/04 - Team and Lanes.excalidraw\|04 - Team and Lanes]] | الفريق والحارات الخمس |
-| 5 | [[Diagrams/05 - Trident Program.excalidraw\|05 - Trident Program]] | برنامج Trident وخط الأسابيع الثمانية |
+| 5 | [[Diagrams/Trident Bootcamp.excalidraw\|Trident Bootcamp]] (أو [[Diagrams/05 - Trident Program.excalidraw\|05 - Trident Program]]) | Trident Bootcamp (المحاور الثلاثة، خط الـ 8 أسابيع، والحارات الخمس) |
 | 6 | [[Diagrams/06 - Assessment and Placement.excalidraw\|06 - Assessment and Placement]] | التقييم والتوزيع على الحارات |
 | 7 | [[Diagrams/07 - Theme and Identity.excalidraw\|07 - Theme and Identity]] | الثيم والهوية (٦ اتجاهات) |
 | 8 | [[Diagrams/08 - First 90 Days.excalidraw\|08 - First 90 Days]] | أول ٩٠ يوماً |
