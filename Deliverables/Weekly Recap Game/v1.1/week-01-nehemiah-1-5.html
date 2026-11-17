@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ابنِ السور مع نحميا</title>
+<style>
+:root{--bg:#14213d;--card:#1f2f55;--gold:#fca311;--stone:#b08968;--tx:#fff;--mut:#b8c1d9}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif;font-size:18px;line-height:1.7}
+#app{max-width:520px;margin:0 auto;padding:10px 16px 40px}
+.top{display:flex;justify-content:space-between;color:var(--mut);font-size:15px}
+svg{width:100%;display:block;background:linear-gradient(#0c1630,#2a3b6b);border-radius:14px;margin:6px 0 12px}
+.card{background:var(--card);border-radius:16px;padding:16px 18px;margin-bottom:12px}
+h1{font-size:28px;margin:6px 0;text-align:center}h2{font-size:20px;margin:0 0 8px}
+.tag{color:var(--gold);font-weight:700;font-size:16px}
+.mut{color:var(--mut);font-size:16px}
+.verse{border-inline-start:4px solid var(--gold);padding-inline-start:12px;color:#ffe2a8;margin:10px 0 0}
+button{font:inherit;color:var(--tx);background:var(--card);border:2px solid #3a4d7d;border-radius:14px;padding:12px 14px;width:100%;margin:6px 0;text-align:start;cursor:pointer}
+button:active{transform:scale(.98)}
+button.go{background:var(--gold);color:#14213d;border-color:var(--gold);text-align:center;font-weight:700;margin-top:10px}
+button.sel{border-color:var(--gold);background:#3a3f5e}
+.big{font-size:54px;text-align:center}
+.fade{animation:f .4s}@keyframes f{from{opacity:0;transform:translateY(8px)}}
+.st{fill:var(--stone);stroke:#6f4e37;stroke-width:1}
+.st.on{animation:drop .5s ease-out}.st.cap{fill:var(--gold);stroke:#b8780a}
+.empty{fill:none;stroke:#4b5f93;stroke-width:1;stroke-dasharray:3 2}
+@keyframes drop{from{transform:translateY(-30px);opacity:0}}
+.st,.empty{transform-box:fill-box}
+#hero{transition:transform .7s ease;font-size:22px}
+.conf{position:fixed;top:-30px;font-size:26px;animation:fall 3s linear forwards;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ===== محتوى الأسبوع: عدّل هنا كل أسبوع فقط ===== */
+const GAME={
+ title:"سفر نحميا ١ – ٥",
+ rounds:[
+ {ch:1,title:"عبء الصلاة وتحمّل المسؤولية",motto:"الخدمة تبدأ على الركب قبل الأقدام",
+  cards:[
+  {h:"الاهتمام بالآخرين وقت الراحة",t:"رغم منصب نحميا المرموق كساقٍ للملك في قصر شوشن، سأل عن إخوته وأورشليم. ولما سمع الخبر لم يتجاهله بل تأثر بعمق.",v:"«السُّورَ مُنْهَدِمٌ وَأَبْوَابَهَا مَحْرُوقَةٌ بِالنَّارِ» (نحميا ١: ٣)"},
+  {h:"الصلاة قبل أي خطوة",t:"لم يلجأ نحميا للشكوى البشرية أولاً، بل دخل في صلاة وصوم.",v:"«جَلَسْتُ وَبَكَيْتُ وَنُحْتُ أَيَّاماً، وَصُمْتُ وَصَلَّيْتُ أَمَامَ إِلَهِ السَّمَاءِ» (نحميا ١: ٤)"},
+  {h:"الاعتراف والتواضع",t:"شمل نحميا نفسه في خطايا الشعب، وهذا قلب القائد الذي يتحمل المسؤولية ولا يكتفي بإلقاء اللوم.",v:"«إِنِّي أَنَا وَبَيْتُ أَبِي قَدْ أَخْطَأْنَا» (نحميا ١: ٦)"},
+  {h:"التمسك بوعود الله",t:"ذكّر نحميا الله بوعوده لموسى بأن التوبة والرجوع يجمعان المشتتين (١: ٨-٩)، ثم طلب نعمة خاصة أمام الملك.",v:"«أَعْطِ نَجَاحاً الْيَوْمَ لِعَبْدِكَ وَامْنَحْهُ رَحْمَةً أَمَامَ هَذَا الرَّجُلِ» (نحميا ١: ١١)"}],
+  qs:["من الإحساس بالمشكلة لبداية الخدمة: نحميا ساب راحته في القصر عشان قلبه وجعه على أورشليم. إيه أكتر حاجة لمست قلبك وحمستك إنك تقبل التحدي وتنزل تخدم وسط انشغالاتك؟",
+      "رد الفعل الأول: لما بنواجه أزمة في الخدمة أو في حياتنا، غالباً بنبدأ بالقلق أو الكلام. إزاي ندرّب نفسنا يكون رد فعلنا الأول هو الصلاة زي نحميا؟"]},
+ {ch:2,title:"التخطيط الحكيم والانطلاق للعمل",motto:"إله السماء يعطينا النجاح ونحن نقوم ونبني",
+  cards:[
+  {h:"الصبر والصلاة السهمية",t:"ظل نحميا يصلي أربعة أشهر حتى سنحت الفرصة. وعندما سأله الملك أرتحشستا عن سبب كآبته، خاف جداً لكنه رفع صلاة سريعة في قلبه قبل أن يجيب.",v:"«فَصَلَّيْتُ إِلَى إِلَهِ السَّمَاءِ، وَقُلْتُ لِلْمَلِكِ...» (نحميا ٢: ٤-٥)"},
+  {h:"الجمع بين الصلاة والتخطيط",t:"لم تكن صلاته تواكلاً؛ كان جاهزاً بطلبات محددة (رسائل للولاة لتسهيل المرور، وأخشاب من فردوس الملك)، وأرجع التوفيق لله.",v:"«يَدِ إِلَهِي الصَّالِحَةِ عَلَيَّ» (نحميا ٢: ٨)"},
+  {h:"دراسة الواقع في هدوء",t:"عند وصوله لأورشليم، تفقد الأسوار المنهدمة ليلاً في صمت دون أن يخبر أحداً، ليدرس حجم المشكلة بدقة قبل طرح الحلول.",v:"(نحميا ٢: ١٢-١٦)"},
+  {h:"التشجيع والثقة في الله",t:"لما شارك القادة الرؤية تشجعوا. وأمام سخرية سنبلط وطوبيا وجشم، رد بيقين الإيمان.",v:"«لِنَقُمْ وَلْنَبْنِ» (٢: ١٨) · «إِنَّ إِلَهَ السَّمَاءِ يُعْطِينَا النَّجَاحَ، وَنَحْنُ عَبِيدُهُ نَقُومُ وَنَبْنِي» (٢: ٢٠)"}],
+  qs:["مواجهة الخوف والرهبة: طبيعي كخدام لسه بنبدأ نحس برهبة المسؤولية (زي نحميا لما خاف قدام الملك). إيه أكتر حاجة مخوفاك في بداية الخدمة، وإزاي نطبّق «الصلاة السريعة» وسط دوشة التحضير؟",
+      "حماس البدايات vs التخطيط الهادئ: إزاي نوزن بين حماسنا الكبير كخدام جدد، وبين إننا ناخد وقتنا نفهم احتياج مخدومينا وندرس كويس قبل ما نندفع؟",
+      "روح الفريق الواحد: إيه أكتر كلمة تشجيع أو مساعدة محتاجها من باقي الفريق في الفترة الجاية عشان نحس إننا بنبني السور سوا؟"]},
+ {ch:3,title:"العمل الجماعي وتكامل الأدوار",motto:"كل واحد يبني مقابل بيته حسب موهبته",
+  cards:[
+  {h:"القدوة تبدأ من القادة",t:"كان ألياشيب الكاهن العظيم والكهنة أول من بدأوا بالبناء في باب الضأن، ليؤكدوا أن القيادة الروحية قدوة في العمل والبذل.",v:"(نحميا ٣: ١)"},
+  {h:"اختلاف المواهب وتكاملها",t:"لم يبنِ السور محترفون فقط، بل شارك الصائغ والعطار وحتى البنات مع أبيهن؛ فكل موهبة لها مكانها في الخدمة.",v:"(نحميا ٣: ٨ و ١٢)"},
+  {h:"البدء من الدائرة القريبة",t:"رمّم كل شخص الجزء المقابل لبيته، وهذا يعلّمنا أن الأمانة تبدأ من حياتنا الشخصية وفصلنا ومخدومينا.",v:"(نحميا ٣: ١٠ و ٢٣)"},
+  {h:"الخدمة بحمية ونشاط",t:"تميز باروك بأنه «رَمَّمَ بِحَمِيَّةٍ» (بحماس)، بينما تكبّر العظماء ولم يضعوا أعناقهم في العمل.",v:"(نحميا ٣: ٥ و ٢٠)"}],
+  qs:["موهبتك في البناء: في السور اشترك الصائغ والعطار والبنات. إيه الموهبة أو الحاجة اللي إنت شاطر فيها وحاسس إنك تقدر تخدم بيها الفريق؟",
+      "البناء مقابل البيت: فكرة إن كل واحد يبني «مقابل بيته» بتعلمنا الالتزام في دايرتنا القريبة. إيه الحاجة اللي محتاجة «ترميم» أو اهتمام أكتر في حياتك الروحية عشان تقدر تخدم وإنت شبعان؟",
+      "الخدمة بحمية: إيه أكتر حاجة بتشحن حماسك في الخدمة، وإزاي نحافظ على الحماس ده لما يظهر أي تعب أو روتين؟"]},
+ {ch:4,title:"الصمود أمام السخرية وتعب منتصف الطريق",motto:"يد تبني ويد تمسك السلاح",
+  cards:[
+  {h:"مواجهة السخرية بالصلاة لا بالجدال",t:"عندما استهزأ سنبلط وطوبيا بضعف اليهود، حوّل نحميا الإهانة إلى صلاة.",v:"«اسْمَعْ يَا إِلَهَنَا لأَنَّا قَدْ صِرْنَا احْتِقَاراً» (نحميا ٤: ٤)"},
+  {h:"العمل من القلب",t:"وصل السور لنصف ارتفاعه لأن الفريق عمل بإخلاص.",v:"«وَكَانَ لِلشَّعْبِ قَلْبٌ فِي الْعَمَلِ» (نحميا ٤: ٦)"},
+  {h:"الصلاة مع اليقظة",t:"أمام تهديدات الأعداء، جمع نحميا بين الصلاة والحراسة العملية.",v:"«فَصَلَّيْنَا إِلَى إِلَهِنَا وَأَقَمْنَا حُرَّاساً ضِدَّهُمْ» (نحميا ٤: ٩)"},
+  {h:"التغلب على الإحباط الداخلي",t:"في منتصف الطريق اشتكى الشعب من التعب وكثرة التراب (٤: ١٠)، فوجّه نحميا أنظارهم لعظمة الله.",v:"«اذْكُرُوا السَّيِّدَ الْعَظِيمَ الْمَرْهُوبَ» (نحميا ٤: ١٤)"},
+  {h:"البناء بيد والسلاح باليد الأخرى",t:"عمل الخدام بيد وأمسكوا السلاح بالأخرى، واتفقوا على التجمع عند سماع صوت البوق واثقين في الله.",v:"«إِلَهُنَا يُحَارِبُ عَنَّا» (نحميا ٤: ١٧ و ٢٠)"}],
+  qs:["فخ «كثرة التراب»: في نص الطريق، الشعب بصوا على التراب الكتير وحسوا إنهم مش قادرين يكملوا. إيه أكتر تفاصيل أو ضغوط بتتعبك في بداية الخدمة، وإزاي نرفع عينينا عنها ونفتكر عظمة ربنا؟",
+      "إيد بتبني وإيد ماسكة السلاح: كخادم، إيه هو «السلاح» الروحي اللي محتاج تفضل ماسكه (زي خلوة يومية، قراءة كتاب، اعتراف) عشان ماتخدمش الناس وإنت من جواك فاضي؟",
+      "صوت البوق وروح الفريق: إزاي نخلي ثقافة فريقنا إن مفيش خادم يفضل شايل همه لوحده، وإمتى بنحتاج نضرب «البوق» ونطلب مساعدة من باقي الفريق؟"]},
+ {ch:5,title:"الاستقامة وحل الخلافات الداخلية",motto:"خدمة بلا أنانية وشهادة بلا عثرة",
+  cards:[
+  {h:"أخطر التحديات تأتي من الداخل",t:"ظهرت مشكلة استغلال الأغنياء لفقر إخوتهم في أزمة المجاعة وفرض ديون ثقيلة عليهم.",v:"(نحميا ٥: ١-٥)"},
+  {h:"التفكير الهادئ قبل المواجهة",t:"عندما سمع نحميا صراخ المظلومين، ضبط انفعاله وفكر قبل أن يتكلم.",v:"«فَتَشَاوَرْتُ فِي قَلْبِي وَبَكَّتُّ الْعُظَمَاءَ وَالْوُلاَةَ» (نحميا ٥: ٧)"},
+  {h:"الحفاظ على الشهادة أمام الخارج",t:"واجه نحميا المخطئين بوضوح حفاظاً على سمعة شعب الله.",v:"«أَمَا تَسِيرُونَ بِخَوْفِ إِلَهِنَا بِسَبَبِ تَعْيِيرِ الأُمَمِ أَعْدَائِنَا؟» (نحميا ٥: ٩)"},
+  {h:"القيادة بالقدوة والتنازل",t:"تنازل نحميا وإخوته عن مستحقاتهم كولاة لكي لا يثقل على الشعب، وكان يطعم ١٥٠ شخصاً يومياً من ماله الخاص.",v:"(نحميا ٥: ١٤-١٨)"},
+  {h:"طلب المكافأة من الله وحده",t:"ختم نحميا الإصحاح بصلاة تعكس نقاء دوافعه وعدم انتظاره لمديح البشر.",v:"«اذْكُرْ لِي يَا إِلَهِي لِلْخَيْرِ كُلَّ مَا عَمِلْتُ لِهَذَا الشَّعْبِ» (نحميا ٥: ١٩)"}],
+  qs:["التعامل مع الخلافات داخل الفريق: لو حصل سوء تفاهم أو اختلاف في الرأي بيننا كخدام، إزاي نطبق مبدأ «فَتَشَاوَرْتُ فِي قَلْبِي» (يعني نهدى ونفكر الأول) قبل ما نتكلم أو نحكم؟",
+      "شهادتنا قدام المخدومين: مخدومينا بيشوفوا المسيح في طريقة تعاملنا مع بعض كفريق. إزاي نحافظ على روح المحبة والاحترام المتبادل قدامهم حتى وقت الضغط؟",
+      "نقاء الدافع: نحميا مكانش مستني شكر من الناس، لكن كان بيقول «اذْكُرْ لِي يَا إِلَهِي». إزاي ندرب نفسنا نفرح بتعبنا في الخدمة حتى لو محدش لاحظ مجهودنا أو شكرنا؟"]}
+ ]
+};
+/* ===== نهاية المحتوى ===== */
+
+const R=GAME.rounds,A=document.getElementById('app'),SW=64,RH=18,GY=150;
+const N=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const total=R.reduce((s,r)=>s+r.cards.length+1,0);
+let c=0,k=0,laid=0,picks=[],t0=0;
+const fmt=()=>{const s=t0?Math.floor((Date.now()-t0)/1000):0;return N(Math.floor(s/60))+":"+N(String(s%60).padStart(2,"0"))};
+const rows=i=>R[i].cards.length+1;
+const heroXY=i=>`translate(${6+i*SW+SW/2-12}px,${GY-rows(i)*(RH+2)-8}px)`;
+
+function wall(){let s=`<svg viewBox="0 0 330 160" aria-label="السور"><circle cx="300" cy="22" r="10" fill="#ffe2a8" opacity=".8"/>
+<rect x="0" y="${GY}" width="330" height="10" fill="#3b2f2f"/>`;
+ R.forEach((r,i)=>{for(let j=0;j<rows(i);j++){const x=6+i*SW,y=GY-(j+1)*(RH+2),cap=j==rows(i)-1;
+  s+=`<rect class="empty" id="e${i}_${j}" x="${x}" y="${y}" width="${SW-6}" height="${RH}" rx="3"/>
+  <rect class="st${cap?' cap':''}" id="s${i}_${j}" x="${x}" y="${y}" width="${SW-6}" height="${RH}" rx="3" style="display:none"/>`}});
+ s+=`<text id="hero" x="0" y="0" style="transform:${heroXY(0)}">👷</text></svg>`;return s}
+
+function lay(i,j){const e=document.getElementById(`s${i}_${j}`);if(!e)return;e.style.display="";e.classList.add('on');laid++}
+function moveHero(){document.getElementById('hero').style.transform=heroXY(Math.min(c,4))}
+const bar=()=>`<div class="top"><span>${GAME.title}</span><span>⏱ ${fmt()}</span><span>🧱 ${N(laid)}/${N(total)}</span></div>`;
+function frame(html){document.getElementById('body').innerHTML=`<div class="fade">${html}</div>`;
+  document.getElementById('bar').innerHTML=bar()}
+
+function home(){A.innerHTML=`<div id="bar"></div>${wall()}<div id="body"></div>`;
+ frame(`<h1>ابنِ السور مع نحميا 🧱</h1><div class="card"><p>٥ إصحاحات = ٥ أجزاء من السور. مع كل تأمل بتقرأه وتثبّت حجره، السور بيعلى ونحميا بيكمل رحلته.</p>
+ <p class="mut">مفيش امتحان ولا إجابات غلط، دي رحلة نتأمل فيها سوا. في آخر كل إصحاح هتختار سؤال تحب نتكلم فيه كفريق.</p></div>
+ <button class="go" onclick="begin()">يلا نبني 🚀</button>`)}
+
+function begin(){c=0;k=0;laid=0;picks=[];t0=Date.now();home2()}
+let tm;
+function home2(){A.innerHTML=`<div id="bar"></div>${wall()}<div id="body"></div>`;clearInterval(tm);tm=setInterval(()=>{const b=document.getElementById('bar');if(b)b.innerHTML=bar()},1000);card()}
+
+function card(){const r=R[c],d=r.cards[k];
+ frame(`<div class="card"><div class="tag">نحميا ${N(r.ch)} · ${r.title}</div><p class="mut">تأمل ${N(k+1)} من ${N(r.cards.length)}</p>
+ <h2>${d.h}</h2><p>${d.t}</p><p class="verse">${d.v}</p></div>
+ <button class="go" id="nx">ثبّت الحجر 🧱</button>`);
+ document.getElementById('nx').onclick=()=>{lay(c,k);k++;k<r.cards.length?card():ask()}}
+
+function ask(){const r=R[c];let ch=-1;
+ frame(`<div class="card"><div class="tag">🎯 اختار سؤال نفتحه مع بعض</div><p class="mut">مفيش إجابة صح أو غلط، اختار اللي لمسك.</p>
+ ${r.qs.map((q,n)=>`<button data-q="${n}">${q}</button>`).join("")}</div>
+ <button class="go" id="nx" disabled style="opacity:.5">ضع حجر التتويج 👑</button>`);
+ const nx=document.getElementById('nx');
+ document.querySelectorAll('button[data-q]').forEach(b=>b.onclick=()=>{ch=+b.dataset.q;
+  document.querySelectorAll('button[data-q]').forEach(x=>x.classList.toggle('sel',x===b));nx.disabled=false;nx.style.opacity=1});
+ nx.onclick=()=>{picks.push({ch:r.ch,q:r.qs[ch]});lay(c,rows(c)-1);plaque()}}
+
+function plaque(){const r=R[c],last=c==R.length-1;
+ frame(`<div class="big">🏅</div><div class="card" style="text-align:center"><div class="tag">اكتمل جزء نحميا ${N(r.ch)}</div><h2>${r.motto}</h2></div>
+ <button class="go" id="nx">${last?"شوف السور كله 🎉":"كمّل مع نحميا ◀"}</button>`);
+ document.getElementById('nx').onclick=()=>{c++;if(last){c=4;finish()}else{k=0;moveHero();card()}}}
+
+function finish(){clearInterval(tm);
+ for(let n=0;n<30;n++){const s=document.createElement('span');s.className='conf';s.textContent=["🎉","🧱","✨","🕊️"][n%4];
+  s.style.left=Math.random()*95+"%";s.style.animationDelay=Math.random()*1.5+"s";document.body.appendChild(s);setTimeout(()=>s.remove(),5000)}
+ frame(`<div class="big">🏰</div><h1>السور اكتمل!</h1><p class="mut" style="text-align:center">${N(laid)} حجر في ${fmt()}</p>
+ <div class="card"><div class="tag">شعارات الرحلة</div>${R.map(r=>`<p>🏅 نحميا ${N(r.ch)}: <b>${r.motto}</b></p>`).join("")}</div>
+ <div class="card"><div class="tag">أسئلتنا للنقاش النهارده</div>${picks.map(p=>`<p><b>نحميا ${N(p.ch)}:</b> ${p.q}</p>`).join("")}
+ <p class="mut">📸 خد سكرين شوت، وشارك إجابة واحدة مع اللي جنبك.</p></div>
+ <button class="go" onclick="begin()">ابدأ من الأول 🔄</button>`)}
+
+home();
+</script>
+</body>
+</html>

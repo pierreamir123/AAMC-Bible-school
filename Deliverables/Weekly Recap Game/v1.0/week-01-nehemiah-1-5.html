@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>٥ دقائق – ٥ إصحاحات</title>
+<style>
+:root{--bg:#14213d;--card:#1f2f55;--gold:#fca311;--ok:#2ecc71;--bad:#e74c3c;--tx:#fff;--mut:#b8c1d9}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",sans-serif;min-height:100vh;font-size:18px;line-height:1.6}
+#app{max-width:520px;margin:0 auto;padding:16px 16px 40px}
+.top{display:flex;justify-content:space-between;color:var(--mut);font-size:15px}
+.bar{height:8px;background:#0c1630;border-radius:8px;overflow:hidden;margin:8px 0 18px}
+.bar i{display:block;height:100%;background:var(--gold);width:100%}
+.card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px}
+h1{font-size:28px;margin:8px 0}h2{font-size:21px;margin:0 0 10px}
+.tag{color:var(--gold);font-weight:700}
+.mut{color:var(--mut);font-size:16px}
+button{font:inherit;color:var(--tx);background:var(--card);border:2px solid #3a4d7d;border-radius:14px;padding:14px;width:100%;margin:6px 0;text-align:start;cursor:pointer}
+button:active{transform:scale(.98)}
+button.go{background:var(--gold);color:#14213d;border-color:var(--gold);text-align:center;font-weight:700;margin-top:14px}
+button.ok{border-color:var(--ok);background:#1d4a3a}
+button.bad{border-color:var(--bad);background:#5a2430}
+button.sel{border-color:var(--gold);background:#3a3f5e}
+.big{font-size:56px;text-align:center}
+.verse{border-inline-start:4px solid var(--gold);padding-inline-start:12px;color:var(--mut)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ===== محتوى الأسبوع: عدّل هنا كل أسبوع فقط ===== */
+const GAME={
+  title:"نحميا ١–٥",
+  rounds:[
+    {ch:1,theme:"الحمل والصلاة",
+     q:"سمع نحميا إن سور أورشليم مهدوم. إيه كان أول رد فعل له؟",
+     opts:["بكى وصام وصلّى أيام","جهّز ناس وسافر فوراً","كتب شكوى للملك"],a:0,
+     verse:"نحميا ١: ٤",
+     lesson:"الحمل بيبدأ على الركبة قبل الخطة. ونحميا اعترف «أخطأنا أنا وبيت أبي» — دخل نفسه في الخطأ بدل ما يشير بإصبعه.",
+     ask:"إيه الحمل اللي حاطه ربنا على قلبك في الخدمة دلوقتي؟",
+     commit:["هصلي له بالاسم كل يوم الأسبوع ده","هعترف بتقصيري أنا قبل ما أحكم على غيري","هسأل ربنا يوريني دوري بالظبط"]},
+    {ch:2,theme:"صلاة سريعة وخطة محسوبة",
+     q:"الملك سأل نحميا عن طلبه. إيه اللي عمله نحميا قبل ما يرد؟",
+     opts:["صلّى لإله السماء في لحظتها","طلب مرتب أعلى","قال له هرجع بعدين"],a:0,
+     verse:"نحميا ٢: ٤",
+     lesson:"٤ شهور صلاة، وبعدها صلاة سهم في ثانية. وكان جاهز بخطة: خطابات، خشب، مدة. وكشف على السور بالليل قبل ما يعلن للناس: صلاة + تخطيط + حكمة.",
+     ask:"إمتى آخر مرة صلّيت صلاة سريعة وسط موقف ضاغط؟",
+     commit:["هصلي صلاة سهم قبل أي اجتماع أو كلمة","هجهّز خطة لحاجة بصلي لها","هراجع الوضع كويس قبل ما أتكلم"]},
+    {ch:3,theme:"كل واحد له حصة",
+     q:"إزاي اتبنى السور في إصحاح ٣؟",
+     opts:["كل واحد بنى الجزء اللي قدام بيته","عمال مستأجرين من بره","الكهنة وبس"],a:0,
+     verse:"نحميا ٣: ١٢، ٢٨",
+     lesson:"كهنة وتجار وصاغة وحتى بنات شلوم اشتغلوا. ربنا سجّل أسماءهم. وفي المقابل أشراف تقوع ما دخلوش أعناقهم في الخدمة، بس أهل تقوع بنوا جزء تاني!",
+     ask:"إيه «الجزء اللي قدام بيتك» في الخدمة؟",
+     commit:["هقوم بدوري بدون ما أستنى حد","هشجع واحد من الفريق بالاسم","هسأل: فين محتاجين إيد زيادة؟"]},
+    {ch:4,theme:"المقاومة",
+     q:"لما سنبلط سخر وهدّد، نحميا عمل إيه؟",
+     opts:["صلّى وأقام حرّاس","وقف الشغل لحد ما الأمور تهدى","رد عليهم بالسخرية"],a:0,
+     verse:"نحميا ٤: ٦، ٩، ٢٠",
+     lesson:"صلاة وحراسة معاً. نص الشعب بيبني ونص ماسك سلاح. «وكان للشعب قلب في العمل»، و«إلهنا يحارب عنا». المقاومة مش علامة إنك غلط، ممكن تكون علامة إنك صح.",
+     ask:"إيه اللي بيوقفك أو يحبطك في الخدمة (سخرية، تعب، خوف)؟",
+     commit:["هطلب من أخ يصلي معايا في الحاجة دي","هكمل بقلب ماشي في الشغل","هسلم الحرب لله وأحرس نفسي"]},
+    {ch:5,theme:"الظلم من جوه والقدوة",
+     q:"لما شاف الفقراء بيئنوا من ظلم إخوتهم الأغنياء، نحميا عمل إيه؟",
+     opts:["غضب ووبّخ الأشراف ورجّعوا الرهون","تجاهل عشان السور يخلص","أجّل الموضوع لبعد البناء"],a:0,
+     verse:"نحميا ٥: ٦–١٣، ١٥",
+     lesson:"المشكلة الداخلية أخطر من العدو الخارجي. ونحميا ما أكلش خبز الوالي ١٢ سنة «من أجل خوف الله». القائد بيقود بالقدوة قبل الكلام.",
+     ask:"فين محتاج تكون قدوة أو تواجه مشكلة داخلية بمحبة؟",
+     commit:["هواجه موضوع مأجّله بمحبة وصراحة","هتنازل عن حقي في موقف الأسبوع ده","هراجع قدوتي قدام اللي بخدمهم"]}
+  ]
+};
+/* ===== نهاية المحتوى ===== */
+
+const QT=20, A=document.getElementById('app');
+let i=0,score=0,t0=0,clock=null,timer=null,picks=[],right=0;
+const shuf=a=>{a=a.slice();for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]]}return a};
+const N=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const hdr=()=>`<div class="top"><span>الإصحاح ${N(GAME.rounds[i].ch)} من ٥</span><span id="clk">⏱ ${fmt()}</span><span>⭐ ${N(score)}</span></div>
+<div class="bar"><i id="pb" style="width:${i/5*100}%"></i></div>`;
+function fmt(){const s=t0?Math.floor((Date.now()-t0)/1000):0;return N(Math.floor(s/60))+":"+N(String(s%60).padStart(2,"0"))}
+
+function start(){i=0;score=0;right=0;picks=[];t0=Date.now();clearInterval(clock);
+  clock=setInterval(()=>{const c=document.getElementById('clk');if(c)c.textContent="⏱ "+fmt()},1000);quiz()}
+
+function home(){A.innerHTML=`<div class="big">🧱</div><h1 style="text-align:center">٥ دقائق – ٥ إصحاحات</h1>
+<div class="card"><h2 class="tag">${GAME.title}</h2>
+<p>٥ جولات، جولة لكل إصحاح. في كل جولة: سؤال سريع (${N(QT)} ثانية) ← الدرس ← التزام صغير تختاره.</p>
+<p class="mut">الإجابة السريعة بتكسب نقط أكتر. افتح على موبايلك واستنّى إشارة القائد.</p></div>
+<button class="go" onclick="start()">يلا نبدأ 🚀</button>`}
+
+function quiz(){clearInterval(timer);const r=GAME.rounds[i];
+  const o=shuf(r.opts.map((t,k)=>({t,k})));let left=QT*10,done=false;
+  A.innerHTML=hdr()+`<div class="card"><div class="tag">${r.theme}</div><h2>${r.q}</h2>
+  <div class="bar"><i id="qb"></i></div>${o.map((x,n)=>`<button data-k="${x.k}">${x.t}</button>`).join("")}</div>`;
+  const reveal=(chosen)=>{if(done)return;done=true;clearInterval(timer);
+    const ok=chosen===r.a;if(ok){right++;score+=10+Math.ceil(left/20)}
+    A.querySelectorAll('button[data-k]').forEach(b=>{const k=+b.dataset.k;b.disabled=true;
+      if(k===r.a)b.classList.add('ok');else if(k===chosen)b.classList.add('bad')});
+    document.querySelector('.top span:last-child').textContent="⭐ "+N(score);
+    A.querySelector('.card').insertAdjacentHTML('beforeend',`<p>${ok?"✅ ممتاز!":chosen<0?"⏰ خلص الوقت":"❌ مش بالظبط"}</p><button class="go" id="nx">الدرس ◀</button>`);
+    document.getElementById('nx').onclick=lesson};
+  A.querySelectorAll('button[data-k]').forEach(b=>b.onclick=()=>reveal(+b.dataset.k));
+  timer=setInterval(()=>{left--;const q=document.getElementById('qb');if(q)q.style.width=left/(QT*10)*100+"%";if(left<=0)reveal(-1)},100)}
+
+function lesson(){const r=GAME.rounds[i];
+  A.innerHTML=hdr()+`<div class="card"><div class="tag">💡 الدرس</div><p>${r.lesson}</p><p class="verse">${r.verse}</p></div>
+  <div class="card"><div class="tag">🎯 فكّر لنفسك</div><h2>${r.ask}</h2>
+  ${r.commit.map((c,k)=>`<button data-c="${k}">${c}</button>`).join("")}</div>
+  <button class="go" id="nx" disabled style="opacity:.5">اختار التزام واحد</button>`;
+  let ch=-1;const nx=document.getElementById('nx');
+  A.querySelectorAll('button[data-c]').forEach(b=>b.onclick=()=>{ch=+b.dataset.c;
+    A.querySelectorAll('button[data-c]').forEach(x=>x.classList.toggle('sel',x===b));
+    nx.disabled=false;nx.style.opacity=1;nx.textContent=i<4?"الإصحاح التالي ◀":"النتيجة 🏁"});
+  nx.onclick=()=>{picks.push(r.commit[ch]);i++;i<5?quiz():finish()}}
+
+function finish(){clearInterval(clock);i=4;
+  const m=score>=90?"خادم مجتهد في الكلمة 🏆":score>=60?"قريب جداً! 👏":"الكلمة محتاجة قراءة تانية 📖";
+  A.innerHTML=`<div class="big">🏁</div><h1 style="text-align:center">${m}</h1>
+  <div class="card"><h2>⭐ ${N(score)} نقطة · ✅ ${N(right)} من ٥ · ⏱ ${fmt()}</h2></div>
+  <div class="card"><div class="tag">التزاماتي الأسبوع ده</div>
+  ${picks.map((p,k)=>`<p>${N(k+1)}. ${p}</p>`).join("")}
+  <p class="mut">📸 خد سكرين شوت، وشارك التزام واحد مع اللي جنبك.</p></div>
+  <button class="go" onclick="start()">العب تاني 🔄</button>`}
+
+home();
+</script>
+</body>
+</html>
