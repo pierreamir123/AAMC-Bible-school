@@ -44,6 +44,9 @@ Export of the Claude Code chat in which Pierre dictated (in Franco-Arabic) a sli
 - Teaching-method examples on the Personality slide.
 - The persona figure named "مينا" on the Mission slide.
 
+## State at push time (2026-11-18)
+This chat ended with a 16-slide `deck.html`. When pushed, `deck.html` had 14 slides, plus `deck.pptx` and hero images (`cover-hero`, `callout-hero`, `dream-hero`, `servant-figure`, `onesimus`): another session changed the deck after this chat. Those later edits are not described here; check the deck README and git log.
+
 ## Open
 - Wording of "eston kol elmktob" for the central service.
 - Verse wording (all four) was written from memory; check against the printed Bible.
