@@ -80,6 +80,7 @@ Hub note for the AAMC Bible School project: (updated 2026-11-08 to match the chu
 | ٦ أول ٩٠ يوماً | [[Servant Program - Stage 6 First 90 Days]] | منجز (ينتظر قراراتك) |
 
 ## القرارات الرئيسية (Key Decisions)، ٢٠٢٦-١١-٠٨
+- **الهدف الرئيسي (صاحب الخدمة):** أن يكون الكتاب المقدس **معاشاً** ويُقدَّم **بطريقة مشوقة وجميلة**. يحكم الأهداف الثلاثة (الأولاد، الخدام، الخدمة المركزية) وكودَي «Without system everything dies» و«Walk the Talk».
 - **المحاور الثلاثة سُمّيت:** الروح (Spirit)، الهيكل العظمي (Skeleton)، الجسد (Body).
 - **الروح تضم:** Mission، Vision، Culture، Identity، Branding، Communication flow، وكودها **«Without system everything dies»**. «الاكسس» = axes.
 - **الهيكل العظمي:** كوده **«Walk the Talk»**: تقديم الدرس بسهولة وجاذبية؛ نظامان معاً (الـ What = القصة الكتابية أثناء التحضير، والـ How = طريقة التحضير نموذج للتقديم)؛ البوت كامب يعلّم الـ How والـ What مدمج فيه. وحدة ٢-٧ مقترحة.
@@ -88,5 +89,8 @@ Hub note for the AAMC Bible School project: (updated 2026-11-08 to match the chu
 - **بناء أي تيم** على مراحل Tuckman: Forming ← Storming ← Norming ← Performing، تُطبَّق على كل تيم ومجموعة الخدام كلها. المدد والمعايير مقترحة: [[Team Stages - Evaluation and Milestones]].
 - **نموذج RASCI** على محور الروح: [[Spirit Axis - RASCI Structure and KPIs]] (مصفوفة، إرشادات، KPIs؛ مقترح).
 - **شخص جديد:** [[Michael Safwat]] = المسؤول عن التكوين، للخدام فقط حالياً، والـ A في Mission/Vision/Culture.
+- **الـ Vision (صيغة صاحب الخدمة النهائية):** «خدمة كتابية معاصرة، جذورها أرثوذكسية؛ خدامها بيعيشوا الكتاب ويعيّشوه لأولادهم، بيبنوا جيل يكمّل بُكره».
+- **الـ Vision والـ Mission (مسودتي الأولى):** «خادم كتابي معاصر» ومعه كلام مفصّل عن المُمكِّنين والإرث والجذور؛ مسودة الصياغة في [[Mission and Vision Statements]]. تنتظر اعتماده، وهل تستبدل صياغة الرؤية الحالية في العرض أم تكمّلها.
 - **مفتوح:** علاقة Michael بأمين الخدمة والكاهن · هل يُستشار الكاهن في Mission/Vision/Culture · أرقام الـ KPIs · مدة المراحل · نصوص Mission/Vision/Culture · هل البوت كامب = برنامج الـ٨ أسابيع.
+- **مراجعة العرض (٢٠٢٦-١١-٠٨):** `deck.html` صار ١٨ شريحة بترتيب Why→Who→What→How→When، بلا شريحة الكودين، والمعالم بالتواريخ الـ٧ من صاحب الخدمة (١١/١١ حتى ١٥/٩). التفاصيل: [[wiki/logs/2026-11-08 - Deck revision]].
 - **مطبّق في v1.5 والـ deck:** كود Walk the Talk وقالب تقديم القصة (أسبوع ٥) وملخص RASCI والمدد المقترحة. مصفوفة RASCI والـ KPIs الكاملة داخل المذكرات فقط.
